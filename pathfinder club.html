@@ -1,0 +1,1333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hima Pathfinder Club - Pure, Kind, True</title>
+  <meta name="description"
+    content="Hima Pathfinder Club: Christian leadership, outdoor adventure, camping, honors, and Bible discovery for youth ages 10-15.">
+  <link rel="icon" type="image/png" href="images/379408-middle.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="code.js" defer></script>
+  <style>
+    .law-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 1.25rem;
+      cursor: pointer;
+      transition: var(--transition);
+      position: relative;
+      border-left: 5px solid var(--primary);
+      background-color: #f8efef;
+      border-left-color: #16a34a;
+      border-width: 5px;
+      margin: 5px;
+    }
+
+    .law-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+      border-left-color: var(--accent);
+    }
+
+    .law-card.expanded {
+      background-color: #e4e3de;
+      border-color: var(--accent);
+    }
+
+    .law-number {
+      font-size: 0.8rem;
+      font-weight: 800;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .law-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin: 0.25rem 0 0.5rem;
+    }
+
+    .law-details {
+      display: none;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      border-top: 1px dashed var(--border);
+      padding-top: 0.6rem;
+      margin-top: 0.5rem;
+      animation: fadeIn 0.3s ease;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(5px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .timeline {
+      position: relative;
+      max-width: 860px;
+      margin: 2rem auto 0;
+      padding-left: 2rem;
+      border-left: 3px solid var(--primary);
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 2rem;
+    }
+
+    .timeline-dot {
+      position: absolute;
+      left: -2.6rem;
+      top: 0.2rem;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: var(--accent);
+      border: 4px solid var(--navy);
+    }
+
+    .timeline-content {
+      background: var(--surface);
+      padding: 1.25rem 1.5rem;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border);
+    }
+
+    .timeline-year {
+      display: inline-block;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: #fff;
+      background: var(--primary);
+      padding: 0.2rem 0.6rem;
+      border-radius: var(--radius-full);
+      margin-bottom: 0.4rem;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Top Utility Bar -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-bar-contact">
+        <span><i class="fa fa-flag" aria-hidden="true"></i> Hima Pathfinder Club</span>
+        <span><i class="fa fa-map-marker" aria-hidden="true"></i> Hima, Kasese, Uganda</span>
+        <span><i class="fa fa-phone" aria-hidden="true"></i> Club Director: +256 700 000 000</span>
+      </div>
+      <div class="top-bar-actions">
+        <span>Meetings: Every Sabbath 2:30 PM &amp; Sundays</span>
+        <a href="#" class="search-trigger-btn"><i class="fa fa-search" aria-hidden="true"></i> Search (Ctrl+K)</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container">
+      <div class="nav-wrapper">
+        <a href="index.html" class="brand-identity">
+          <img src="images/bell.png" alt="Pathfinder Triangle Logo" class="logo-img">
+          <div class="brand-text">
+            <h1>Hima Pathfinder Club</h1>
+            <div class="subtext">Seventh-day Adventist Church</div>
+          </div>
+        </a>
+
+        <nav class="desktop-nav" aria-label="Main Navigation">
+          <div class="nav-item"><a href="index.html" class="nav-link">Home</a></div>
+          <div class="nav-item"><a href="about.html" class="nav-link">About Us</a></div>
+          <div class="nav-item">
+            <a href="ministries.html" class="nav-link active dropdown-trigger">Ministries <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+            <div class="dropdown-menu">
+              <a href="pathfinder club.html" class="dropdown-item">Pathfinder Club <span class="item-badge">Ages
+                  10-15</span></a>
+              <a href="adventurer club.html" class="dropdown-item">Adventurer Club <span class="item-badge">Ages
+                  4-9</span></a>
+              <a href="Ambassador club.html" class="dropdown-item">Ambassador Club <span class="item-badge">Ages
+                  16-21</span></a>
+              <a href="youth.html" class="dropdown-item">Adventist Youth (AY)</a>
+              <a href="young adults.html" class="dropdown-item">Young Adults</a>
+              <a href="children.html" class="dropdown-item">Children Ministries</a>
+              <a href="women.html" class="dropdown-item">Women's Ministries</a>
+              <a href="communty.html" class="dropdown-item">Community Service</a>
+            </div>
+          </div>
+          <div class="nav-item">
+            <a href="resources.html" class="nav-link dropdown-trigger">Resources <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+            <div class="dropdown-menu">
+              <a href="resources.html#handbook" class="dropdown-item">Elders Handbook</a>
+              <a href="resources.html#manual" class="dropdown-item">Church Manual</a>
+              <a href="resources.html#program" class="dropdown-item">GC Yearly Program</a>
+              <a href="resources.html#pathfinder-resources" class="dropdown-item">Pathfinder Manuals</a>
+            </div>
+          </div>
+          <div class="nav-item"><a href="media.html" class="nav-link">Media</a></div>
+          <div class="nav-item"><a href="staff & contact.html" class="nav-link">Staff & Contact</a></div>
+          <div class="nav-item"><a href="more.html" class="nav-link">More</a></div>
+        </nav>
+
+        <div class="header-actions">
+          <button class="btn-icon search-trigger-btn" title="Search site (Ctrl+K)"><i class="fa fa-search"
+              aria-hidden="true"></i></button>
+          <a href="#register" class="btn btn-secondary btn-sm">Join Club</a>
+          <button class="hamburger-btn" aria-label="Toggle navigation menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-backdrop"></div>
+  <aside class="mobile-nav-drawer" aria-label="Mobile Navigation">
+    <div class="mobile-drawer-header">
+      <div class="brand-identity">
+        <img src="images/bell.png" alt="Logo" style="width: 40px; height: 40px;">
+        <strong style="color:var(--color-primary);">Hima Pathfinders</strong>
+      </div>
+      <button class="mobile-drawer-close" aria-label="Close menu">&times;</button>
+    </div>
+    <div class="mobile-nav-links">
+      <a href="index.html"> Home</a>
+      <a href="about.html">About Us</a>
+      <a href="pathfinder club.html" class="active"> Pathfinder Club</a>
+      <a href="adventurer club.html">Adventurer Club</a>
+      <a href="Ambassador club.html"> Ambassador Club</a>
+      <a href="youth.html"> Adventist Youth (AY)</a>
+      <a href="resources.html"> Resources</a>
+      <a href="media.html"> Media & Gallery</a>
+      <a href="staff & contact.html"> Staff & Contact</a>
+      <a href="more.html"> Calendar & FAQs</a>
+    </div>
+  </aside>
+
+  <!-- Page Hero -->
+  <section class="page-hero" style="background-image:url(images/new1.jpg);">
+    <div class="container">
+      <img src="images/bell.png" alt="Emblem" style="width:80px; height:80px; margin:0 auto 15px; object-fit:contain;">
+      <h1>Hima Pathfinder Club</h1>
+      <p>Building Christian character, outdoor resilience, lifelong friendships, and dedicated service in youth ages
+        10-15.</p>
+      <div class="breadcrumbs">
+        <a href="index.html">Home</a> <span>/</span> <a href="ministries.html">Ministries</a> <span>/</span>
+        <span>Pathfinder Club</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="main-wrapper">
+
+    <div class="container" style="padding-top: 2rem;">
+      <!-- MISSION, AIM, MOTTO & PLEDGE GRID -->
+      <div class="section-header">
+        <span class="section-tag"><i class="fa fa-compass" aria-hidden="true"></i> Our Guiding Light</span>
+        <h2 class="section-title">Mission, Aim, Motto &amp; Pledge</h2>
+      </div>
+
+      <div class="grid-2" style="margin-bottom: 3.5rem;">
+        <!-- Mission -->
+        <div class="card" style="padding:1.75rem; border-top: 5px solid var(--primary);">
+          <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:0.75rem;">
+            <div
+              style="width:40px; height:40px; border-radius:50%; background:rgba(183,28,28,0.1); color:var(--primary); display:flex; align-items:center; justify-content:center; font-size:1.2rem;">
+              <i class="fa fa-bullhorn"></i>
+            </div>
+            <h3 style="color:var(--navy); font-size:1.3rem;">Our Mission</h3>
+          </div>
+          <p style="font-size:1.1rem; font-weight:600; color:var(--primary); margin-bottom:0.5rem;">
+            "Save the Lost, Serve Humanity."
+          </p>
+          <p style="color:var(--text-muted); font-size:0.95rem;">
+            The Pathfinder Club operates under the Adventist Youth Ministries, dedicated to winning young hearts to
+            Jesus
+            Christ and leading them into active, unselfish Christian service.
+          </p>
+        </div>
+
+        <!-- Aim & Motto -->
+        <div class="card" style="padding:1.75rem; border-top: 5px solid var(--accent);">
+          <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:0.75rem;">
+            <div
+              style="width:40px; height:40px; border-radius:50%; background:rgba(245,158,11,0.15); color:var(--accent); display:flex; align-items:center; justify-content:center; font-size:1.2rem;">
+              <i class="fa fa-flag"></i>
+            </div>
+            <h3 style="color:var(--navy); font-size:1.3rem;">AIM & MOTTO</h3>
+          </div>
+          <div style="margin-bottom:0.75rem;">
+            <strong style="color:var(--navy); display:block; font-size:0.9rem;">AIM:</strong>
+            <p style="font-size:1rem; font-weight:600; color:var(--primary);">
+              "To take the Advent message to all the world in my Generation."
+            </p>
+          </div>
+          <div>
+            <strong style="color:var(--navy); display:block; font-size:0.9rem;">MOTTO:</strong>
+            <p style="font-size:1rem; font-weight:600; color:var(--primary);">
+              "The love of Christ Compels me."
+            </p>
+          </div>
+        </div>
+
+        <!-- Pledge -->
+        <div class="card" style="padding:1.75rem; border-top: 5px solid var(--navy); grid-column: 1 / -1;">
+          <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:0.75rem;">
+            <div
+              style="width:40px; height:40px; border-radius:50%; background:rgba(13,27,42,0.1); color:var(--navy); display:flex; align-items:center; justify-content:center; font-size:1.2rem;">
+              <i class="fa fa-hand-paper-o"></i>
+            </div>
+            <h3 style="color:var(--navy); font-size:1.3rem;">The Pathfinder Pledge</h3>
+          </div>
+          <blockquote
+            style="font-size:1.15rem; font-style:italic; color:var(--navy); border-left:4px solid var(--primary); padding-left:1.25rem; margin:0.5rem 0 1rem; line-height:1.7;">
+            "By the Grace of God,<br>
+            I will be pure, kind, and true.<br>
+            I will keep the Pathfinder Law.<br>
+            I will be a servant of God and a friend to man."
+          </blockquote>
+          <p style="font-size:0.9rem; color:var(--text-muted);">
+            Recited at every Pathfinder induction, flag-raising, and camporee, affirming our lifelong dedication to God
+            and community.
+          </p>
+        </div>
+      </div>
+
+      <!-- INTERACTIVE 8 PATHFINDER LAWS EXPLORER -->
+      <section style="margin-bottom: 3.5rem;">
+        <div class="section-header">
+          <span class="section-tag">Interactive Law Explorer</span>
+          <h2 class="section-title">The 8 Pathfinder Laws</h2>
+          <p class="section-desc">Click any card below to discover the practical meaning and spiritual application of
+            each
+            law in our daily lives.</p>
+        </div>
+
+        <div class="grid-2">
+          <!-- Law 1 -->
+          <div class="law-card">
+            <span class="law-number">Law 1</span>
+            <h4 class="law-title">Keep the Morning Watch</h4>
+            <p style="font-size:0.92rem; color:var(--text-main);">I will pray and study my Bible each day.</p>
+            <div class="law-details">
+              <strong>Scriptural Insight:</strong> Psalm 5:3 — Starting each morning in quiet communion with God
+              provides
+              the spiritual armor and wisdom to conquer every temptation of the day.
+            </div>
+          </div>
+
+          <!-- Law 2 -->
+          <div class="law-card">
+            <span class="law-number">Law 2</span>
+            <h4 class="law-title">Do My Honest Part</h4>
+            <p style="font-size:0.92rem; color:var(--text-main);">By the power of God, I will do my share and be
+              dependable.</p>
+            <div class="law-details">
+              <strong>Scriptural Insight:</strong> Ecclesiastes 9:10 — Whatever your hand finds to do, do it with all
+              your
+              might. Fulfilling duties at home, school, and church with integrity.
+            </div>
+          </div>
+
+          <!-- Law 3 -->
+          <div class="law-card">
+            <span class="law-number">Law 3</span>
+            <h4 class="law-title">Care for My Body</h4>
+            <p style="font-size:0.92rem; color:var(--text-main);">I will be temperate in all things and strive for
+              physical fitness.</p>
+            <div class="law-details">
+              <strong>Scriptural Insight:</strong> 1 Corinthians 6:19-20 — Our bodies are temples of the Holy Spirit. We
+              abstain from harmful substances and maintain active exercise and nutrition.
+            </div>
+          </div>
+
+          <!-- Law 4 -->
+          <div class="law-card">
+            <span class="law-number">Law 4</span>
+            <h4 class="law-title">Keep a Level Eye</h4>
+            <p style="font-size:0.92rem; color:var(--text-main);">I will not lie, cheat, or deceive; I will face
+              difficulties bravely.</p>
+            <div class="law-details">
+              <strong>Scriptural Insight:</strong> Proverbs 4:25 — Look straight ahead and fix your eyes on what is
+              before
+              you. Living with moral courage, honesty, and truthfulness.
+            </div>
+          </div>
+
+          <!-- Law 5 -->
+          <div class="law-card">
+            <span class="law-number">Law 5</span>
+            <h4 class="law-title">Be Courteous and Obedient</h4>
+            <p style="font-size:0.92rem; color:var(--text-main);">I will be kind to others, respecting parents,
+              teachers,
+              and leaders.</p>
+            <div class="law-details">
+              <strong>Scriptural Insight:</strong> Ephesians 6:1-3 — Cultivating genuine politeness, showing reverence
+              to
+              our elders, and walking in willing obedience.
+            </div>
+          </div>
+
+          <!-- Law 6 -->
+          <div class="law-card">
+            <span class="law-number">Law 6</span>
+            <h4 class="law-title">Walk Softly in the Sanctuary</h4>
+            <p style="font-size:0.92rem; color:var(--text-main);">In any place of worship, I will be quiet, reverent,
+              and
+              attentive.</p>
+            <div class="law-details">
+              <strong>Scriptural Insight:</strong> Habakkuk 2:20 — The Lord is in His holy temple; let all the earth
+              keep
+              silence before Him. Maintaining reverence in God's presence.
+            </div>
+          </div>
+
+          <!-- Law 7 -->
+          <div class="law-card">
+            <span class="law-number">Law 7</span>
+            <h4 class="law-title">Keep a Song in My Heart</h4>
+            <p style="font-size:0.92rem; color:var(--text-main);">I will be cheerful, praising God even during times of
+              trial.</p>
+            <div class="law-details">
+              <strong>Scriptural Insight:</strong> 1 Thessalonians 5:16-18 — Rejoice always; pray without ceasing; give
+              thanks in all circumstances. A cheerful countenance brings light into dark moments.
+            </div>
+          </div>
+
+          <!-- Law 8 -->
+          <div class="law-card">
+            <span class="law-number">Law 8</span>
+            <h4 class="law-title">Go on God's Errands</h4>
+            <p style="font-size:0.92rem; color:var(--text-main);">I will always be ready to tell others about Jesus and
+              do
+              good deeds.</p>
+            <div class="law-details">
+              <strong>Scriptural Insight:</strong> Isaiah 6:8 — "Here am I; send me." Eager readiness to serve the needy
+              and share the gospel of Christ's second coming.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- INTERACTIVE PATHFINDER ANTHEM SING-ALONG -->
+      <section style="margin-bottom: 3.5rem;">
+        <div class="container">
+          <!-- Interactive Audio Player: Pathfinder Club Song -->
+          <div class="audio-player-card">
+            <div class="player-info">
+              <div class="player-icon"><i class="fa fa-music" aria-hidden="true"></i></div>
+              <div class="player-meta">
+                <h4>The Official Pathfinder Song</h4>
+                <p>Composed by Henry T. Bergh (1949) — Play &amp; sing along</p>
+              </div>
+            </div>
+            <div class="player-progress-bar">
+              <div class="player-progress-fill"></div>
+            </div>
+            <div class="player-times">
+              <span class="current-time">0:45</span>
+              <span class="total-duration">2:15</span>
+            </div>
+            <div class="player-controls">
+              <button class="play-toggle-btn" title="Play or Pause Song"><i class="fa fa-play" aria-hidden="true"></i></button>
+            </div>
+            <div
+              style="margin-top:20px; padding:15px; background:rgba(255,255,255,0.1); border-radius:var(--radius-md); font-size:0.92rem; font-style:italic; text-align:center;">
+              “Oh, we are the Pathfinders strong,<br>
+              The servants of God are we.<br>
+              Faithful as we march along,<br>
+              In kindness, truth, and purity.<br>
+              A message to tell to the world,<br>
+              A truth that will set us free!<br>
+              King Jesus the Savior’s coming back<br>
+              For you and me!”
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Interactive Tabs: Investiture Achievement Classes & Requirements -->
+      <section class="section-muted" id="achievement-curriculum">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag"><i class="fa fa-trophy" aria-hidden="true"></i> Investiture Achievement</span>
+            <h2 class="section-title">Pathfinder Progressive Classes &amp; Requirements</h2>
+            <p class="section-subtitle">The official Seventh-day Adventist Investiture Achievement curriculum. Explore all required modules, tracks, honors, and download official manuals.</p>
+          </div>
+
+          <div class="tab-container">
+            <div class="tab-nav">
+              <button class="tab-btn active" data-tab="friend"><i class="fa fa-bookmark" aria-hidden="true"></i> Friend (Age 10)</button>
+              <button class="tab-btn" data-tab="companion"><i class="fa fa-bookmark" aria-hidden="true"></i> Companion (Age 11)</button>
+              <button class="tab-btn" data-tab="explorer"><i class="fa fa-bookmark" aria-hidden="true"></i> Explorer (Age 12)</button>
+              <button class="tab-btn" data-tab="ranger"><i class="fa fa-bookmark" aria-hidden="true"></i> Ranger (Age 13)</button>
+              <button class="tab-btn" data-tab="voyager"><i class="fa fa-bookmark" aria-hidden="true"></i> Voyager (Age 14)</button>
+              <button class="tab-btn" data-tab="guide"><i class="fa fa-bookmark" aria-hidden="true"></i> Guide (Age 15)</button>
+              <button class="tab-btn" data-tab="masterguide"><i class="fa fa-star" aria-hidden="true"></i> Master Guide (16+)</button>
+            </div>
+
+            <!-- Friend Tab -->
+            <div class="tab-content active" id="friend">
+              <div class="achievement-card">
+                <div class="achievement-header">
+                  <div>
+                    <span class="achievement-badge badge-blue"><i class="fa fa-certificate" aria-hidden="true"></i> Blue Ribbon</span>
+                    <h3 style="color:var(--color-primary); font-size:1.45rem; margin-top:8px;">Friend Class (Grade 5 / Age 10)</h3>
+                  </div>
+                  <a href="pdf/Manual-Friend (1).pdf" target="_blank" class="btn btn-secondary btn-sm">
+                    <i class="fa fa-file-pdf-o" aria-hidden="true"></i> Download Friend Manual (PDF)
+                  </a>
+                </div>
+                <p style="color:var(--color-text-muted); font-size:1rem; margin-bottom:20px; line-height:1.6;">
+                  The foundational level of the Pathfinder Investiture Achievement curriculum. Friends develop deep devotional habits, learn teamwork, discover outdoor living basics, and practice kindness in the community.
+                </p>
+
+                <h4 style="font-size:1.1rem; color:var(--color-primary); margin-bottom:12px; display:flex; align-items:center; gap:8px;">
+                  <i class="fa fa-list-check" aria-hidden="true"></i> Complete Achievement Requirements Checklist:
+                </h4>
+
+                <div class="requirements-grid">
+                  <div class="requirement-box">
+                    <div class="requirement-box-title"><i class="fa fa-user" aria-hidden="true"></i> I. Personal Growth</div>
+                    <div class="requirement-list">
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Be 10 years old or in the 5th Grade.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Memorize and explain the Pathfinder Pledge and Law.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Read the book <em>Steps to Christ</em> or the current junior devotional book.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Maintain an active club attendance record and earn the Reading Certificate.</span></div>
+                    </div>
+                  </div>
+
+                  <div class="requirement-box">
+                    <div class="requirement-box-title"><i class="fa fa-book" aria-hidden="true"></i> II. Spiritual Discovery</div>
+                    <div class="requirement-list">
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Memorize the Ten Commandments (Exodus 20:3–17) in order.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Study and recite the Model Prayer (Matthew 6:9–13).</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Read through the Gospel of Mark and participate in a discussion of Christ's miracles.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Recite the names of the 39 books of the Old Testament.</span></div>
+                    </div>
+                  </div>
+
+                  <div class="requirement-box">
+                    <div class="requirement-box-title"><i class="fa fa-hands-helping" aria-hidden="true"></i> III. Serving Others</div>
+                    <div class="requirement-list">
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Dedicate at least two hours in community service or environmental cleanup in Hima.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Participate in a visitation program to elderly, sick, or shut-in church members.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Demonstrate good citizenship by helping in your home and church worship setup.</span></div>
+                    </div>
+                  </div>
+
+                  <div class="requirement-box">
+                    <div class="requirement-box-title"><i class="fa fa-users" aria-hidden="true"></i> IV. Making Friends</div>
+                    <div class="requirement-list">
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Discover biblical principles of friendship and table manners.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Complete a roleplay activity on standing firm against negative peer pressure.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Demonstrate Christian courtesy, respect for parents, elders, and teachers.</span></div>
+                    </div>
+                  </div>
+
+                  <div class="requirement-box">
+                    <div class="requirement-box-title"><i class="fa fa-heartbeat" aria-hidden="true"></i> V. Health &amp; Fitness</div>
+                    <div class="requirement-list">
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Complete the Health and Fitness honor or Basic Water Safety honor.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Sign the Pathfinder Christian Temperance Pledge against alcohol, tobacco, and drugs.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Complete the basic physical fitness test (sit-ups, push-ups, shuttle run).</span></div>
+                    </div>
+                  </div>
+
+                  <div class="requirement-box">
+                    <div class="requirement-box-title"><i class="fa fa-tree" aria-hidden="true"></i> VI. Nature Study</div>
+                    <div class="requirement-list">
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Earn two nature honors (e.g., Mammals, Birds, Trees, Flowers, or Stars).</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Go on a one-hour nature walk and identify at least 10 species created by God.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Keep an illustrated nature observation notebook for four weeks.</span></div>
+                    </div>
+                  </div>
+
+                  <div class="requirement-box">
+                    <div class="requirement-box-title"><i class="fa fa-campground" aria-hidden="true"></i> VII. Outdoor Living</div>
+                    <div class="requirement-list">
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Earn the Knot Tying honor: tie and explain 8 basic knots from memory.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Earn Camping Skills I honor (tent pitching, campfire safety, outdoor hygiene).</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Hike 3 kilometers (2 miles) in nature with your unit.</span></div>
+                    </div>
+                  </div>
+
+                  <div class="requirement-box">
+                    <div class="requirement-box-title"><i class="fa fa-award" aria-hidden="true"></i> VIII. Honor Enrichment</div>
+                    <div class="requirement-list">
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Complete one honor in Arts, Crafts, or Household Arts not previously earned.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Participate in an Investiture Service and receive the Friend badge and blue ribbon.</span></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="achievement-footer-actions">
+                  <div><strong>Manual:</strong> Friend Class Curriculum Manual (GC Youth Ministries)</div>
+                  <div style="display:flex; gap:10px;">
+                    <a href="pdf/Manual-Friend (1).pdf" target="_blank" class="btn btn-primary btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View Manual</a>
+                    <a href="#register" class="btn btn-secondary btn-sm"><i class="fa fa-user-plus" aria-hidden="true"></i> Enroll In Friend</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Companion Tab -->
+            <div class="tab-content" id="companion">
+              <div class="achievement-card">
+                <div class="achievement-header">
+                  <div>
+                    <span class="achievement-badge badge-red"><i class="fa fa-certificate" aria-hidden="true"></i> Red Ribbon</span>
+                    <h3 style="color:var(--color-primary); font-size:1.45rem; margin-top:8px;">Companion Class (Grade 6 / Age 11)</h3>
+                  </div>
+                  <a href="pdf/Manual-Companion.pdf" target="_blank" class="btn btn-secondary btn-sm">
+                    <i class="fa fa-file-pdf-o" aria-hidden="true"></i> Download Companion Manual (PDF)
+                  </a>
+                </div>
+                <p style="color:var(--color-text-muted); font-size:1rem; margin-bottom:20px; line-height:1.6;">
+                  Expands outdoor skills, biblical knowledge, and first aid readiness. Companions focus on nature navigation, tree and bird identification, and building spiritual relationships.
+                </p>
+
+                <h4 style="font-size:1.1rem; color:var(--color-primary); margin-bottom:12px; display:flex; align-items:center; gap:8px;">
+                  <i class="fa fa-list-check" aria-hidden="true"></i> Complete Achievement Requirements Checklist:
+                </h4>
+
+                <div class="requirements-grid">
+                  <div class="requirement-box">
+                    <div class="requirement-box-title"><i class="fa fa-user" aria-hidden="true"></i> I. Personal Growth</div>
+                    <div class="requirement-list">
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Be 11 years old or in the 6th Grade.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Memorize and recite the Pathfinder Aim, Motto, and Pledge to the Bible.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Daily Bible reading guide (Morning Watch) for at least 8 consecutive weeks.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Read the current Pathfinder Book Club selection.</span></div>
+                    </div>
+                  </div>
+
+                  <div class="requirement-box">
+                    <div class="requirement-box-title"><i class="fa fa-book" aria-hidden="true"></i> II. Spiritual Discovery</div>
+                    <div class="requirement-list">
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Memorize all 27 books of the New Testament in sequence.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Study the Parables of Jesus in the Gospels and explain their meaning today.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Memorize Bible Memory Gems on Salvation, Grace, the Sabbath, and the Second Coming.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Understand how the Old Testament Sanctuary service points to Jesus Christ.</span></div>
+                    </div>
+                  </div>
+
+                  <div class="requirement-box">
+                    <div class="requirement-box-title"><i class="fa fa-hands-helping" aria-hidden="true"></i> III. Serving Others</div>
+                    <div class="requirement-list">
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Plan and conduct a club community outreach project with your unit.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Participate in at least 2 missionary activities (tract distribution, Sabbath School presentation).</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Write a note or card of Christian encouragement to at least 3 people.</span></div>
+                    </div>
+                  </div>
+
+                  <div class="requirement-box">
+                    <div class="requirement-box-title"><i class="fa fa-users" aria-hidden="true"></i> IV. Making Friends</div>
+                    <div class="requirement-list">
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Practice biblical conflict resolution according to Matthew 18:15–17.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Participate in a group team-building and trust challenge.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Discuss family duties and show practical helpfulness to parents and siblings.</span></div>
+                    </div>
+                  </div>
+
+                  <div class="requirement-box">
+                    <div class="requirement-box-title"><i class="fa fa-heartbeat" aria-hidden="true"></i> V. Health &amp; Fitness</div>
+                    <div class="requirement-list">
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Earn the First Aid Basic honor (bandaging, wounds, burns, sprains, fainting).</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Study the NEWSTART principles (Nutrition, Exercise, Water, Sunlight, Temperance, Air, Rest, Trust).</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Complete a 30-day personal physical endurance tracking program.</span></div>
+                    </div>
+                  </div>
+
+                  <div class="requirement-box">
+                    <div class="requirement-box-title"><i class="fa fa-tree" aria-hidden="true"></i> VI. Nature Study</div>
+                    <div class="requirement-list">
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Earn two nature honors (e.g., Reptiles, Amphibians, Insects, Shells, or Weather).</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Identify at least 15 species of birds or trees native to Western Uganda.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Keep an outdoor nature logbook during a club field camp.</span></div>
+                    </div>
+                  </div>
+
+                  <div class="requirement-box">
+                    <div class="requirement-box-title"><i class="fa fa-campground" aria-hidden="true"></i> VII. Outdoor Living</div>
+                    <div class="requirement-list">
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Earn Camping Skills II honor (outdoor cooking, one-match campfire, tool safety for knife and hatchet).</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Participate in an overnight club campout.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Complete a 5 km (3-mile) hike carrying personal gear.</span></div>
+                    </div>
+                  </div>
+
+                  <div class="requirement-box">
+                    <div class="requirement-box-title"><i class="fa fa-award" aria-hidden="true"></i> VIII. Honor Enrichment</div>
+                    <div class="requirement-list">
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Earn one honor in Vocational or Outdoor industries.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Participate in an Investiture Ceremony and receive the Companion badge and red ribbon.</span></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="achievement-footer-actions">
+                  <div><strong>Manual:</strong> Companion Class Curriculum Manual (GC Youth Ministries)</div>
+                  <div style="display:flex; gap:10px;">
+                    <a href="pdf/Manual-Companion.pdf" target="_blank" class="btn btn-primary btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View Manual</a>
+                    <a href="#register" class="btn btn-secondary btn-sm"><i class="fa fa-user-plus" aria-hidden="true"></i> Enroll In Companion</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Explorer Tab -->
+            <div class="tab-content" id="explorer">
+              <div class="achievement-card">
+                <div class="achievement-header">
+                  <div>
+                    <span class="achievement-badge badge-green"><i class="fa fa-certificate" aria-hidden="true"></i> Green Ribbon</span>
+                    <h3 style="color:var(--color-primary); font-size:1.45rem; margin-top:8px;">Explorer Class (Grade 7 / Age 12)</h3>
+                  </div>
+                  <a href="pdf/Manual-Explorer.pdf" target="_blank" class="btn btn-secondary btn-sm">
+                    <i class="fa fa-file-pdf-o" aria-hidden="true"></i> Download Explorer Manual (PDF)
+                  </a>
+                </div>
+                <p style="color:var(--color-text-muted); font-size:1rem; margin-bottom:20px; line-height:1.6;">
+                  Focuses on personal discovery, wilderness navigation, astronomy, and Christian history. Explorers lead devotionals, master map reading, and take active roles in church evangelism.
+                </p>
+
+                <h4 style="font-size:1.1rem; color:var(--color-primary); margin-bottom:12px; display:flex; align-items:center; gap:8px;">
+                  <i class="fa fa-list-check" aria-hidden="true"></i> Complete Achievement Requirements Checklist:
+                </h4>
+
+                <div class="requirements-grid">
+                  <div class="requirement-box">
+                    <div class="requirement-box-title"><i class="fa fa-user" aria-hidden="true"></i> I. Personal Growth</div>
+                    <div class="requirement-list">
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Be 12 years old or in the 7th Grade.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Active membership in Hima Pathfinder Club for at least one full year.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Complete the Explorer Bible Reading plan through the Gospel accounts and Romans.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Read a selected book on Christian church history or Adventist pioneers.</span></div>
+                    </div>
+                  </div>
+
+                  <div class="requirement-box">
+                    <div class="requirement-box-title"><i class="fa fa-book" aria-hidden="true"></i> II. Spiritual Discovery</div>
+                    <div class="requirement-list">
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Study the Protestant Reformation and the history of the Seventh-day Adventist movement.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Understand the significance of 1844 and the Great Disappointment leading to truth.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Memorize 1 Corinthians 13 (The Love Chapter) from memory.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Conduct a unit worship or youth prayer circle.</span></div>
+                    </div>
+                  </div>
+
+                  <div class="requirement-box">
+                    <div class="requirement-box-title"><i class="fa fa-hands-helping" aria-hidden="true"></i> III. Serving Others</div>
+                    <div class="requirement-list">
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Lead out in a community assistance or welfare program in Hima.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Participate in Voice of Youth evangelistic campaign or church literature outreach.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Organize a food drive or clothing donation for needy children.</span></div>
+                    </div>
+                  </div>
+
+                  <div class="requirement-box">
+                    <div class="requirement-box-title"><i class="fa fa-users" aria-hidden="true"></i> IV. Making Friends</div>
+                    <div class="requirement-list">
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Examine the Christian use of time, entertainment, and social media.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Learn active listening skills and empathy for peers facing challenges.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Appreciate cultural diversity and unity in Christ.</span></div>
+                    </div>
+                  </div>
+
+                  <div class="requirement-box">
+                    <div class="requirement-box-title"><i class="fa fa-heartbeat" aria-hidden="true"></i> V. Health &amp; Fitness</div>
+                    <div class="requirement-list">
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Earn the Basic Rescue honor or Nutrition honor.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Deliver a 3-minute presentation to your unit on the benefits of water and exercise.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Demonstrate knowledge of healthy plant-based meal planning.</span></div>
+                    </div>
+                  </div>
+
+                  <div class="requirement-box">
+                    <div class="requirement-box-title"><i class="fa fa-tree" aria-hidden="true"></i> VI. Nature Study</div>
+                    <div class="requirement-list">
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Earn the Stars (Astronomy) honor: identify constellations, Orion, planets, and the North Star.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Earn the Weather honor: read barometers, cloud formations, and storm forecasting.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Take part in an ecological tree-planting project.</span></div>
+                    </div>
+                  </div>
+
+                  <div class="requirement-box">
+                    <div class="requirement-box-title"><i class="fa fa-campground" aria-hidden="true"></i> VII. Outdoor Living</div>
+                    <div class="requirement-list">
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Earn Camping Skills III honor: learn square, diagonal, and sheer lashing.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Demonstrate compass reading, finding true north, and topographic map navigation.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Complete an 8 km (5-mile) compass orientation hike.</span></div>
+                    </div>
+                  </div>
+
+                  <div class="requirement-box">
+                    <div class="requirement-box-title"><i class="fa fa-award" aria-hidden="true"></i> VIII. Honor Enrichment</div>
+                    <div class="requirement-list">
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Complete one honor in Science, Technology, or Craft fields.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Receive the Explorer pin and green ribbon at Investiture.</span></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="achievement-footer-actions">
+                  <div><strong>Manual:</strong> Explorer Class Curriculum Manual (GC Youth Ministries)</div>
+                  <div style="display:flex; gap:10px;">
+                    <a href="pdf/Manual-Explorer.pdf" target="_blank" class="btn btn-primary btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View Manual</a>
+                    <a href="#register" class="btn btn-secondary btn-sm"><i class="fa fa-user-plus" aria-hidden="true"></i> Enroll In Explorer</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Ranger Tab -->
+            <div class="tab-content" id="ranger">
+              <div class="achievement-card">
+                <div class="achievement-header">
+                  <div>
+                    <span class="achievement-badge badge-silver"><i class="fa fa-certificate" aria-hidden="true"></i> Silver Ribbon</span>
+                    <h3 style="color:var(--color-primary); font-size:1.45rem; margin-top:8px;">Ranger Class (Grade 8 / Age 13)</h3>
+                  </div>
+                  <a href="pdf/Manual-Ranger.pdf" target="_blank" class="btn btn-secondary btn-sm">
+                    <i class="fa fa-file-pdf-o" aria-hidden="true"></i> Download Ranger Manual (PDF)
+                  </a>
+                </div>
+                <p style="color:var(--color-text-muted); font-size:1rem; margin-bottom:20px; line-height:1.6;">
+                  Prepares teens for peer leadership, biblical prophecy defense, advanced first aid (CPR), and wilderness pioneering. Rangers mentor younger units and organize community welfare initiatives.
+                </p>
+
+                <h4 style="font-size:1.1rem; color:var(--color-primary); margin-bottom:12px; display:flex; align-items:center; gap:8px;">
+                  <i class="fa fa-list-check" aria-hidden="true"></i> Complete Achievement Requirements Checklist:
+                </h4>
+
+                <div class="requirements-grid">
+                  <div class="requirement-box">
+                    <div class="requirement-box-title"><i class="fa fa-user" aria-hidden="true"></i> I. Personal Growth</div>
+                    <div class="requirement-list">
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Be 13 years old or in the 8th Grade.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Review and teach the Pathfinder Pledge and Law to younger Pathfinders.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Maintain a personal daily devotional journal for at least 8 weeks.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Read selected chapters from <em>Messages to Young People</em> by Ellen G. White.</span></div>
+                    </div>
+                  </div>
+
+                  <div class="requirement-box">
+                    <div class="requirement-box-title"><i class="fa fa-book" aria-hidden="true"></i> II. Spiritual Discovery</div>
+                    <div class="requirement-list">
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Study Daniel 2, Daniel 7, and Revelation 14 (The Three Angels' Messages).</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Explain the 2300-day prophecy and the Sanctuary doctrine.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Memorize the Beatitudes (Matthew 5:1–12) and present their application.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Lead an evangelistic prayer meeting or Sabbath School program.</span></div>
+                    </div>
+                  </div>
+
+                  <div class="requirement-box">
+                    <div class="requirement-box-title"><i class="fa fa-hands-helping" aria-hidden="true"></i> III. Serving Others</div>
+                    <div class="requirement-list">
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Spend at least 6 hours in humanitarian community service in the Hima area.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Plan and conduct a church service or hospital visitation initiative.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Assist in teaching drill and marching commands to Friend or Companion units.</span></div>
+                    </div>
+                  </div>
+
+                  <div class="requirement-box">
+                    <div class="requirement-box-title"><i class="fa fa-users" aria-hidden="true"></i> IV. Making Friends</div>
+                    <div class="requirement-list">
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Discuss Christian dating principles, modesty, and personal integrity.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Complete a peer mediation exercise for resolving group conflicts.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Demonstrate leadership empathy toward struggling or discouraged youth.</span></div>
+                    </div>
+                  </div>
+
+                  <div class="requirement-box">
+                    <div class="requirement-box-title"><i class="fa fa-heartbeat" aria-hidden="true"></i> V. Health &amp; Fitness</div>
+                    <div class="requirement-list">
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Earn First Aid Standard honor: learn adult and child CPR techniques.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Demonstrate emergency handling for heatstroke, hypothermia, fractures, and shock.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Conduct a calisthenics or morning fitness warm-up for the club.</span></div>
+                    </div>
+                  </div>
+
+                  <div class="requirement-box">
+                    <div class="requirement-box-title"><i class="fa fa-tree" aria-hidden="true"></i> VI. Nature Study</div>
+                    <div class="requirement-list">
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Earn two nature honors (e.g., Ferns, Fungi, Ecology, Forestry, or Geology).</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Lead a group nature study hike and explain God's design in biodiversity.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Participate in an environmental habitat restoration project.</span></div>
+                    </div>
+                  </div>
+
+                  <div class="requirement-box">
+                    <div class="requirement-box-title"><i class="fa fa-campground" aria-hidden="true"></i> VII. Outdoor Living</div>
+                    <div class="requirement-list">
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Earn Camping Skills IV honor: construct wilderness pioneering shelters without nails.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Demonstrate survival cooking outdoors without pots or modern utensils.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Complete a 10 km (6-mile) hiking expedition with topographical checkpoints.</span></div>
+                    </div>
+                  </div>
+
+                  <div class="requirement-box">
+                    <div class="requirement-box-title"><i class="fa fa-award" aria-hidden="true"></i> VIII. Honor Enrichment</div>
+                    <div class="requirement-list">
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Earn one honor in Outdoor Industries or Wilderness Living.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Receive the Ranger pin and silver ribbon at Investiture.</span></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="achievement-footer-actions">
+                  <div><strong>Manual:</strong> Ranger Class Curriculum Manual (GC Youth Ministries)</div>
+                  <div style="display:flex; gap:10px;">
+                    <a href="pdf/Manual-Ranger.pdf" target="_blank" class="btn btn-primary btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View Manual</a>
+                    <a href="#register" class="btn btn-secondary btn-sm"><i class="fa fa-user-plus" aria-hidden="true"></i> Enroll In Ranger</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Voyager Tab -->
+            <div class="tab-content" id="voyager">
+              <div class="achievement-card">
+                <div class="achievement-header">
+                  <div>
+                    <span class="achievement-badge badge-burgundy"><i class="fa fa-certificate" aria-hidden="true"></i> Burgundy Ribbon</span>
+                    <h3 style="color:var(--color-primary); font-size:1.45rem; margin-top:8px;">Voyager Class (Grade 9 / Age 14)</h3>
+                  </div>
+                  <a href="pdf/Manual-Voyager.pdf" target="_blank" class="btn btn-secondary btn-sm">
+                    <i class="fa fa-file-pdf-o" aria-hidden="true"></i> Download Voyager Manual (PDF)
+                  </a>
+                </div>
+                <p style="color:var(--color-text-muted); font-size:1rem; margin-bottom:20px; line-height:1.6;">
+                  Focuses on advanced discipleship, Christian apologetics, spiritual gifts discovery, and expedition survival. Voyagers serve as apprentice staff officers and develop lifelong leadership habits.
+                </p>
+
+                <h4 style="font-size:1.1rem; color:var(--color-primary); margin-bottom:12px; display:flex; align-items:center; gap:8px;">
+                  <i class="fa fa-list-check" aria-hidden="true"></i> Complete Achievement Requirements Checklist:
+                </h4>
+
+                <div class="requirements-grid">
+                  <div class="requirement-box">
+                    <div class="requirement-box-title"><i class="fa fa-user" aria-hidden="true"></i> I. Personal Growth</div>
+                    <div class="requirement-list">
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Be 14 years old or in the 9th Grade.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Write a personal philosophy of Christian living based on Scripture.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Complete a spiritual gifts assessment (Romans 12, 1 Corinthians 12).</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Read a full Christian biography or missionary classic.</span></div>
+                    </div>
+                  </div>
+
+                  <div class="requirement-box">
+                    <div class="requirement-box-title"><i class="fa fa-book" aria-hidden="true"></i> II. Spiritual Discovery</div>
+                    <div class="requirement-list">
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>In-depth study of the 28 Fundamental Beliefs of Seventh-day Adventists.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Articulate the doctrine of Righteousness by Faith in Jesus Christ.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Lead a Bible study or Sabbath School lesson discussion for younger youth.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Study Adventist prophetic heritage and the role of Ellen G. White.</span></div>
+                    </div>
+                  </div>
+
+                  <div class="requirement-box">
+                    <div class="requirement-box-title"><i class="fa fa-hands-helping" aria-hidden="true"></i> III. Serving Others</div>
+                    <div class="requirement-list">
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Direct a community humanitarian initiative or ADRA relief program.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Volunteer at least 8 hours in church community medical or literacy projects.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Mentor an Explorer or Ranger Pathfinder throughout the club training year.</span></div>
+                    </div>
+                  </div>
+
+                  <div class="requirement-box">
+                    <div class="requirement-box-title"><i class="fa fa-users" aria-hidden="true"></i> IV. Making Friends</div>
+                    <div class="requirement-list">
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Cultivate emotional intelligence and Christian communication skills.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Examine cross-cultural mission dynamics and community diversity in Uganda.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Lead interactive icebreaker games and team building for junior units.</span></div>
+                    </div>
+                  </div>
+
+                  <div class="requirement-box">
+                    <div class="requirement-box-title"><i class="fa fa-heartbeat" aria-hidden="true"></i> V. Health &amp; Fitness</div>
+                    <div class="requirement-list">
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Earn the Physical Fitness honor or Nutrition honor.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Plan, cook, and serve a balanced, healthy plant-based meal for your unit.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Lead a youth discussion on mental wellness, stress relief, and prayer.</span></div>
+                    </div>
+                  </div>
+
+                  <div class="requirement-box">
+                    <div class="requirement-box-title"><i class="fa fa-tree" aria-hidden="true"></i> VI. Nature Study</div>
+                    <div class="requirement-list">
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Complete an Ecology or Environmental Conservation honor.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Investigate local environmental conservation issues in the Rwenzori region.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Organize an outdoor nature worship service for Pathfinders.</span></div>
+                    </div>
+                  </div>
+
+                  <div class="requirement-box">
+                    <div class="requirement-box-title"><i class="fa fa-campground" aria-hidden="true"></i> VII. Outdoor Living</div>
+                    <div class="requirement-list">
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Earn the Wilderness Living honor or Backpacking honor.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Demonstrate day orienteering by compass and night celestial navigation.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Participate in an overnight 15 km (9-mile) expedition campout.</span></div>
+                    </div>
+                  </div>
+
+                  <div class="requirement-box">
+                    <div class="requirement-box-title"><i class="fa fa-award" aria-hidden="true"></i> VIII. Honor Enrichment</div>
+                    <div class="requirement-list">
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Earn one Master-level or Advanced honor.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Receive the Voyager pin and burgundy ribbon at Investiture.</span></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="achievement-footer-actions">
+                  <div><strong>Manual:</strong> Voyager Class Curriculum Manual (GC Youth Ministries)</div>
+                  <div style="display:flex; gap:10px;">
+                    <a href="pdf/Manual-Voyager.pdf" target="_blank" class="btn btn-primary btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View Manual</a>
+                    <a href="#register" class="btn btn-secondary btn-sm"><i class="fa fa-user-plus" aria-hidden="true"></i> Enroll In Voyager</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Guide Tab -->
+            <div class="tab-content" id="guide">
+              <div class="achievement-card">
+                <div class="achievement-header">
+                  <div>
+                    <span class="achievement-badge badge-gold"><i class="fa fa-certificate" aria-hidden="true"></i> Gold Ribbon</span>
+                    <h3 style="color:var(--color-primary); font-size:1.45rem; margin-top:8px;">Guide Class (Grade 10 / Age 15)</h3>
+                  </div>
+                  <a href="pdf/Manual-Guide.pdf" target="_blank" class="btn btn-secondary btn-sm">
+                    <i class="fa fa-file-pdf-o" aria-hidden="true"></i> Download Guide Manual (PDF)
+                  </a>
+                </div>
+                <p style="color:var(--color-text-muted); font-size:1rem; margin-bottom:20px; line-height:1.6;">
+                  The pinnacle of the junior Pathfinder curriculum. Guides demonstrate advanced leadership, Christian apologetics defense, wilderness survival mastery, and readiness to transition into Master Guide training.
+                </p>
+
+                <h4 style="font-size:1.1rem; color:var(--color-primary); margin-bottom:12px; display:flex; align-items:center; gap:8px;">
+                  <i class="fa fa-list-check" aria-hidden="true"></i> Complete Achievement Requirements Checklist:
+                </h4>
+
+                <div class="requirements-grid">
+                  <div class="requirement-box">
+                    <div class="requirement-box-title"><i class="fa fa-user" aria-hidden="true"></i> I. Personal Growth</div>
+                    <div class="requirement-list">
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Be 15 years old or in the 10th Grade.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Read <em>The Great Controversy</em> or <em>Desire of Ages</em> selected chapters.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Prepare a comprehensive personal leadership portfolio.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Serve as an assistant unit leader for a junior Pathfinder group.</span></div>
+                    </div>
+                  </div>
+
+                  <div class="requirement-box">
+                    <div class="requirement-box-title"><i class="fa fa-book" aria-hidden="true"></i> II. Spiritual Discovery</div>
+                    <div class="requirement-list">
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Christian Apologetics: defend the biblical creation model and authority of Scripture.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Prepare a baptismal candidate or assist in baptismal Bible classes.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Deliver a full sermon or devotional presentation in church or AY program.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Study church organization and Adventist denominational governance.</span></div>
+                    </div>
+                  </div>
+
+                  <div class="requirement-box">
+                    <div class="requirement-box-title"><i class="fa fa-hands-helping" aria-hidden="true"></i> III. Serving Others</div>
+                    <div class="requirement-list">
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Plan, organize, and execute a major community evangelism outreach.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Lead a youth mission day, health clinic, or orphan care program.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Coordinate an outdoor community prayer walk in Hima.</span></div>
+                    </div>
+                  </div>
+
+                  <div class="requirement-box">
+                    <div class="requirement-box-title"><i class="fa fa-users" aria-hidden="true"></i> IV. Making Friends</div>
+                    <div class="requirement-list">
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Master youth leadership psychology, group dynamics, and conflict mediation.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Teach drill and ceremony commands to an entire Pathfinder club assembly.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Demonstrate Christian mentor etiquette and pastoral care for junior youth.</span></div>
+                    </div>
+                  </div>
+
+                  <div class="requirement-box">
+                    <div class="requirement-box-title"><i class="fa fa-heartbeat" aria-hidden="true"></i> V. Health &amp; Fitness</div>
+                    <div class="requirement-list">
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Earn CPR Certification and Advanced First Aid honor.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Organize and direct a 5 km church health run or fitness expo.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Advocate actively for total abstinence from addictive substances.</span></div>
+                    </div>
+                  </div>
+
+                  <div class="requirement-box">
+                    <div class="requirement-box-title"><i class="fa fa-tree" aria-hidden="true"></i> VI. Nature Study</div>
+                    <div class="requirement-list">
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Earn two Advanced / Master-level Nature honors.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Instruct younger Pathfinders in completing a nature honor curriculum.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Create an educational nature display, herbarium, or insect taxonomy collection.</span></div>
+                    </div>
+                  </div>
+
+                  <div class="requirement-box">
+                    <div class="requirement-box-title"><i class="fa fa-campground" aria-hidden="true"></i> VII. Outdoor Living</div>
+                    <div class="requirement-list">
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Earn the Outdoor Leadership honor.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Design and supervise construction of a camp entrance, bridge, or watchtower.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Complete a 20 km (12-mile) survival wilderness hike with overnight bivouac.</span></div>
+                    </div>
+                  </div>
+
+                  <div class="requirement-box">
+                    <div class="requirement-box-title"><i class="fa fa-award" aria-hidden="true"></i> VIII. Honor Enrichment</div>
+                    <div class="requirement-list">
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Earn prerequisite honors for the Master Guide leadership curriculum.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Receive the Guide pin and gold ribbon at Investiture; qualify for Master Guide training.</span></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="achievement-footer-actions">
+                  <div><strong>Manual:</strong> Guide Class Curriculum Manual (GC Youth Ministries)</div>
+                  <div style="display:flex; gap:10px;">
+                    <a href="pdf/Manual-Guide.pdf" target="_blank" class="btn btn-primary btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View Manual</a>
+                    <a href="#register" class="btn btn-secondary btn-sm"><i class="fa fa-user-plus" aria-hidden="true"></i> Enroll In Guide</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Master Guide Tab -->
+            <div class="tab-content" id="masterguide">
+              <div class="achievement-card">
+                <div class="achievement-header">
+                  <div>
+                    <span class="achievement-badge badge-master"><i class="fa fa-shield" aria-hidden="true"></i> Red, Gold &amp; Blue Insignia</span>
+                    <h3 style="color:var(--color-primary); font-size:1.45rem; margin-top:8px;">Master Guide (Leadership / Age 16+)</h3>
+                  </div>
+                  <div style="display:flex; gap:10px;">
+                    <a href="pdf/MG-curriculum-manual (1).pdf" target="_blank" class="btn btn-secondary btn-sm">
+                      <i class="fa fa-file-pdf-o" aria-hidden="true"></i> MG Manual (PDF)
+                    </a>
+                    <a href="pdf/Master Guide Portfolio Guide.pdf" target="_blank" class="btn btn-secondary btn-sm">
+                      <i class="fa fa-book" aria-hidden="true"></i> Portfolio Guide (PDF)
+                    </a>
+                  </div>
+                </div>
+                <p style="color:var(--color-text-muted); font-size:1rem; margin-bottom:20px; line-height:1.6;">
+                  The highest level of leadership training in the Seventh-day Adventist youth ministry. Master Guides are trained directors and leaders equipped to mentor Adventurers, Pathfinders, and Senior Youth.
+                </p>
+
+                <h4 style="font-size:1.1rem; color:var(--color-primary); margin-bottom:12px; display:flex; align-items:center; gap:8px;">
+                  <i class="fa fa-list-check" aria-hidden="true"></i> Complete Master Guide Leadership Requirements:
+                </h4>
+
+                <div class="requirements-grid">
+                  <div class="requirement-box">
+                    <div class="requirement-box-title"><i class="fa fa-id-card" aria-hidden="true"></i> I. Prerequisites</div>
+                    <div class="requirement-list">
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Be a baptized member of the Seventh-day Adventist Church.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Be at least 16 years of age at registration.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Hold a current recommendation from the Hima SDA Church Board.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Complete the 10-hour Basic Staff Training (BST) seminar.</span></div>
+                    </div>
+                  </div>
+
+                  <div class="requirement-box">
+                    <div class="requirement-box-title"><i class="fa fa-bible" aria-hidden="true"></i> II. Spiritual Development</div>
+                    <div class="requirement-list">
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Read the books <em>Steps to Christ</em> and <em>Education</em> by Ellen G. White.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Complete a one-year personal Bible reading plan through the entire Scriptures.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Write a comprehensive essay on your personal spiritual growth and faith journey.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Teach a biblical baptismal or foundational doctrine class to youth.</span></div>
+                    </div>
+                  </div>
+
+                  <div class="requirement-box">
+                    <div class="requirement-box-title"><i class="fa fa-cogs" aria-hidden="true"></i> III. Skills Development</div>
+                    <div class="requirement-list">
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Earn at least 2 honors from Nature, 2 from Outdoor Industries, and 1 from Health &amp; Science.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Hold valid certification in First Aid &amp; CPR from a recognized authority.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Supervise a club drill and ceremonial flag presentation.</span></div>
+                    </div>
+                  </div>
+
+                  <div class="requirement-box">
+                    <div class="requirement-box-title"><i class="fa fa-child" aria-hidden="true"></i> IV. Child &amp; Youth Development</div>
+                    <div class="requirement-list">
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Attend seminars on child psychology, adolescent behavior, and positive mentoring.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Complete mandatory Child Protection and Safeguarding training.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Present a workshop on communication with children or teenagers.</span></div>
+                    </div>
+                  </div>
+
+                  <div class="requirement-box">
+                    <div class="requirement-box-title"><i class="fa fa-user-tie" aria-hidden="true"></i> V. Leadership Field Work</div>
+                    <div class="requirement-list">
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Serve as an active staff leader in Adventurers or Pathfinders for one full year.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Teach at least two honors to completion and lead candidates to investiture.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Attend a Conference/Field Camporee or Leadership Convention.</span></div>
+                    </div>
+                  </div>
+
+                  <div class="requirement-box">
+                    <div class="requirement-box-title"><i class="fa fa-mountain" aria-hidden="true"></i> VI. Outdoor Living &amp; Portfolio</div>
+                    <div class="requirement-list">
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Complete a 25 km (15-mile) outdoor survival expedition or campout.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Compile and present the official Master Guide Portfolio to the Conference Youth Director.</span></div>
+                      <div class="requirement-item"><i class="fa fa-check-circle" aria-hidden="true"></i> <span>Pass the final oral and practical field examination for investiture.</span></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="achievement-footer-actions">
+                  <div><strong>Manuals:</strong> Master Guide Curriculum &amp; Portfolio Guide (GC Youth Ministries)</div>
+                  <div style="display:flex; gap:10px;">
+                    <a href="pdf/MG-curriculum-manual (1).pdf" target="_blank" class="btn btn-primary btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View Manual</a>
+                    <a href="#register" class="btn btn-secondary btn-sm"><i class="fa fa-user-plus" aria-hidden="true"></i> Join Master Guide Club</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Interactive Club Registration Form -->
+      <section id="register">
+        <div class="container">
+          <div class="grid-2" style="align-items: center;">
+            <div>
+              <span class="section-tag">Join the Adventure</span>
+              <h2 class="section-title">Enroll Your Child in Hima Pathfinder Club</h2>
+              <p style="color:var(--color-text-muted); font-size:1.05rem; margin-bottom:20px;">
+                Pathfinder Club is open to all boys and girls aged 10 to 15, regardless of church background. It
+                provides a wholesome, positive, drug-free environment filled with purpose, outdoor excitement, and
+                Christian values.
+              </p>
+              <div
+                style="display:flex; flex-direction:column; gap:12px; color:var(--color-text-main); font-size:0.95rem;">
+                <div><strong>Uniform:</strong> Khaki shirt/blouse, black trousers/skirt, Pathfinder yellow scarf and
+                  slide.</div>
+                <div><strong>Meeting Schedule:</strong> Every Saturday 2:30 PM & selected Sunday mornings.</div>
+                <div><strong>Location:</strong> Hima SDA Church Grounds, Hima Town Council.</div>
+              </div>
+            </div>
+
+            <div class="form-card">
+              <h3 style="color:var(--color-primary); font-size:1.35rem; margin-bottom:18px;">Club Registration Form</h3>
+              <form class="club-registration-form">
+                <div class="form-group">
+                  <label class="form-label" for="child-name">Pathfinder's Full Name</label>
+                  <input type="text" id="child-name" class="form-control" placeholder="Child's full name" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="child-age">Age & Grade</label>
+                  <input type="text" id="child-age" class="form-control" placeholder="e.g. 12 years / Primary 7"
+                    required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="parent-name">Parent / Guardian Name</label>
+                  <input type="text" id="parent-name" class="form-control" placeholder="Guardian's name" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="parent-phone">Parent's Phone Number</label>
+                  <input type="tel" id="parent-phone" class="form-control" placeholder="e.g. +256 700 123 456" required>
+                </div>
+                <button type="submit" class="btn btn-secondary" style="width:100%;">Submit Club Application</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Search Modal -->
+    <div class="search-modal" role="dialog" aria-modal="true" aria-label="Site Search">
+      <div class="search-dialog">
+        <div class="search-header">
+          <span class="search-icon"><i class="fa fa-search" aria-hidden="true"></i></span>
+          <input type="text" id="site-search-input" class="search-input" placeholder="Type to search..."
+            autocomplete="off">
+          <button class="search-close-btn" aria-label="Close search">&times;</button>
+        </div>
+        <div class="search-results" id="search-results-list"></div>
+      </div>
+    </div>
+
+    <button class="back-to-top" title="Scroll to top"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
+
+    <!-- Unified Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <div class="footer-logo">
+              <img src="images/bell.png" alt="Pathfinder Logo">
+              <h3>Hima Pathfinder Club</h3>
+            </div>
+            <p>Training young minds, hearts, and hands in the joyful service of Jesus Christ and humanity under the Seventh-day Adventist Church.</p>
+            <div class="footer-socials">
+              <a href="#" class="footer-social-link" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+              <a href="#" class="footer-social-link" title="YouTube"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+              <a href="https://wa.me/256700000000" class="footer-social-link" title="WhatsApp"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+              <a href="mailto:himasdachurch@gmail.com" class="footer-social-link" title="Email"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+            </div>
+          </div>
+          <div>
+            <h4 class="footer-title">Clubs &amp; Wings</h4>
+            <ul class="footer-links">
+              <li><a href="pathfinder club.html"><i class="fa fa-angle-right" aria-hidden="true"></i> Pathfinder Club</a></li>
+              <li><a href="adventurer club.html"><i class="fa fa-angle-right" aria-hidden="true"></i> Adventurer Club</a></li>
+              <li><a href="Ambassador club.html"><i class="fa fa-angle-right" aria-hidden="true"></i> Ambassador Club</a></li>
+              <li><a href="youth.html"><i class="fa fa-angle-right" aria-hidden="true"></i> Youth Ministries (AY)</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="footer-title">Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="index.html"><i class="fa fa-angle-right" aria-hidden="true"></i> Home</a></li>
+              <li><a href="about.html"><i class="fa fa-angle-right" aria-hidden="true"></i> About Us</a></li>
+              <li><a href="resources.html"><i class="fa fa-angle-right" aria-hidden="true"></i> Manuals &amp; Resources</a></li>
+              <li><a href="media.html"><i class="fa fa-angle-right" aria-hidden="true"></i> Media &amp; Sermons</a></li>
+              <li><a href="staff & contact.html"><i class="fa fa-angle-right" aria-hidden="true"></i> Staff &amp; Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="footer-title">Meeting Schedule</h4>
+            <div class="meeting-schedule-card">
+              <ul class="meeting-schedule">
+                <li><span>Pathfinders:</span> <strong>Saturdays 2:30 PM</strong></li>
+                <li><span>Sunday Drills:</span> <strong>Sundays 9:00 AM</strong></li>
+                <li><span>Sabbath Worship:</span> <strong>Saturdays 9:00 AM</strong></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div>&copy; 2026 Hima Pathfinder Club • Seventh-day Adventist Church. All Rights Reserved.</div>
+          <div class="footer-bottom-links">
+            <a href="pathfinder club.html#register"><i class="fa fa-user-plus" aria-hidden="true"></i> Join Club</a>
+            <a href="staff & contact.html"><i class="fa fa-phone" aria-hidden="true"></i> Contact Director</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+</body>
+
+</html>

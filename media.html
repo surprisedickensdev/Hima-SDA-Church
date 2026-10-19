@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Media Center - Hima SDA Church</title>
+  <meta name="description"
+    content="Watch sermon videos, listen to church hymns, browse photo gallery, and download bulletins at Hima SDA Church.">
+  <link rel="icon" type="image/png" href="images/sad logo.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="code.js" defer></script>
+</head>
+
+<body>
+
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-bar-contact">
+        <span> Hima SDA Media Center</span>
+        <span><i class="fa fa-map-marker" aria-hidden="true"></i> Hima, Kasese, Uganda</span>
+      </div>
+      <div class="top-bar-actions">
+        <span>Sermons • Hymns • Photo Gallery</span>
+        <a href="#" class="search-trigger-btn"><i class="fa fa-search" aria-hidden="true"></i>Search (Ctrl+K)</a>
+      </div>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="nav-wrapper">
+        <a href="index.html" class="brand-identity">
+          <img src="images/sad logo.png" alt="Logo" class="logo-img">
+          <div class="brand-text">
+            <h1>Hima SDA Church</h1>
+            <div class="subtext">Media & Publications</div>
+          </div>
+        </a>
+
+        <nav class="desktop-nav">
+          <div class="nav-item"><a href="index.html" class="nav-link">Home</a></div>
+          <div class="nav-item"><a href="about.html" class="nav-link">About Us</a></div>
+          <div class="nav-item">
+            <a href="ministries.html" class="nav-link dropdown-trigger">Ministries <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+            <div class="dropdown-menu">
+              <a href="pathfinder club.html" class="dropdown-item">Pathfinder Club</a>
+              <a href="adventurer club.html" class="dropdown-item">Adventurer Club</a>
+              <a href="Ambassador club.html" class="dropdown-item">Ambassador Club</a>
+              <a href="youth.html" class="dropdown-item">Adventist Youth (AY)</a>
+              <a href="women.html" class="dropdown-item">Women's Ministries</a>
+              <a href="communty.html" class="dropdown-item">Community Service</a>
+            </div>
+          </div>
+          <div class="nav-item"><a href="resources.html" class="nav-link">Resources</a></div>
+          <div class="nav-item"><a href="media.html" class="nav-link active">Media</a></div>
+          <div class="nav-item"><a href="staff & contact.html" class="nav-link">Staff & Contact</a></div>
+          <div class="nav-item"><a href="more.html" class="nav-link">More</a></div>
+        </nav>
+
+        <div class="header-actions">
+          <button class="btn-icon search-trigger-btn"><i class="fa fa-search" aria-hidden="true"></i></button>
+          <button class="hamburger-btn"><span></span><span></span><span></span></button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-backdrop"></div>
+  <aside class="mobile-nav-drawer">
+    <div class="mobile-drawer-header">
+      <strong>Hima Media Center</strong>
+      <button class="mobile-drawer-close">&times;</button>
+    </div>
+    <div class="mobile-nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="media.html" class="active">Media & Gallery</a>
+      <a href="ministries.html">Ministries</a>
+      <a href="resources.html">Resources</a>
+      <a href="staff & contact.html">Staff & Contact</a>
+    </div>
+  </aside>
+
+  <section class="page-hero">
+    <div class="container">
+      <h1>Hima SDA Media Center</h1>
+      <p>Explore inspiring sermons, uplifting hymns, choir music, and photos of our vibrant church family and club
+        campouts.</p>
+      <div class="breadcrumbs">
+        <a href="index.html">Home</a> <span>/</span> <span>Media</span>
+      </div>
+    </div>
+  </section>
+
+  <main class="main-wrapper">
+    <section>
+      <div class="container">
+        <!-- Interactive Tabs for Media Center -->
+        <div class="tab-container">
+          <div class="tab-nav">
+            <button class="tab-btn active" data-tab="sermons"><i class="fa fa-video-camera" aria-hidden="true"></i> Sermons &amp; Messages</button>
+            <button class="tab-btn" data-tab="gallery"><i class="fa fa-camera" aria-hidden="true"></i> Photo Gallery &amp; Lightbox</button>
+            <button class="tab-btn" data-tab="audio"><i class="fa fa-music" aria-hidden="true"></i> Audio &amp; Hymns</button>
+            <button class="tab-btn" data-tab="bulletins"><i class="fa fa-file-text-o" aria-hidden="true"></i> Weekly Bulletins</button>
+          </div>
+
+          <!-- Tab 1: Sermons -->
+          <div class="tab-content active" id="sermons">
+            <div class="section-header">
+              <span class="section-tag">Word of God</span>
+              <h2 class="section-title">Recent Divine Service Sermons</h2>
+            </div>
+
+            <div class="grid-3">
+              <div class="card">
+                <div class="card-img-wrapper">
+                  <img src="images/GC.jpg" alt="Sermon 1">
+                  <span class="card-badge">Divine Service</span>
+                </div>
+                <div class="card-body">
+                  <h3 class="card-title">Standing Firm in Prophetic Times</h3>
+                  <p class="card-text">A timely study on the Three Angels’ Messages and our blessed hope in Christ.</p>
+                  <div class="card-footer">
+                    <span style="font-size:0.82rem; color:var(--color-text-muted);"><i class="fa fa-clock-o" aria-hidden="true"></i> 42 mins • Pastor</span>
+                    <button class="btn btn-sm btn-primary"
+                      onclick="showToast('Loading Divine Service audio stream...')">Listen Now <i class="fa fa-headphones" aria-hidden="true"></i></button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-img-wrapper">
+                  <img src="images/new1.jpg" alt="Sermon 2">
+                  <span class="card-badge">Youth Week</span>
+                </div>
+                <div class="card-body">
+                  <h3 class="card-title">Pure, Kind, and True: Youth in Mission</h3>
+                  <p class="card-text">Encouraging youth and Pathfinders to shine as bold witnesses for Christ in school
+                    and community.</p>
+                  <div class="card-footer">
+                    <span style="font-size:0.82rem; color:var(--color-text-muted);"><i class="fa fa-clock-o" aria-hidden="true"></i> 35 mins • AY Sponsor</span>
+                    <button class="btn btn-sm btn-primary"
+                      onclick="showToast('Loading Youth Message audio stream...')">Listen Now <i class="fa fa-headphones" aria-hidden="true"></i></button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-img-wrapper">
+                  <img src="images/three angels message.png" alt="Sermon 3">
+                  <span class="card-badge">Revival Series</span>
+                </div>
+                <div class="card-body">
+                  <h3 class="card-title">The Sabbath: A Sanctuary in Time</h3>
+                  <p class="card-text">Discovering the profound spiritual rest and redemptive beauty of the holy Sabbath
+                    day.</p>
+                  <div class="card-footer">
+                    <span style="font-size:0.82rem; color:var(--color-text-muted);"><i class="fa fa-clock-o" aria-hidden="true"></i> 48 mins • Church Elder</span>
+                    <button class="btn btn-sm btn-primary"
+                      onclick="showToast('Loading Sabbath Sermon audio stream...')">Listen Now <i class="fa fa-headphones" aria-hidden="true"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab 2: Photo Gallery with Lightbox -->
+          <div class="tab-content" id="gallery">
+            <div class="section-header">
+              <span class="section-tag">Memories & Fellowship</span>
+              <h2 class="section-title">Church & Pathfinder Photo Gallery</h2>
+              <p class="section-subtitle">Click on any photo to open the interactive full-screen Lightbox viewer.</p>
+            </div>
+
+            <div class="gallery-grid">
+              <div class="gallery-item">
+                <img src="images/scroll.jpg" alt="Congregation Gathering">
+                <div class="gallery-overlay">
+                  <h4>Church Gathering</h4>
+                  <p>Congregation praising together on Sabbath</p>
+                </div>
+              </div>
+
+              <div class="gallery-item">
+                <img src="images/scroll 1.jpg" alt="Pathfinder Investiture">
+                <div class="gallery-overlay">
+                  <h4>Pathfinder Honors</h4>
+                  <p>Investiture and camping achievements</p>
+                </div>
+              </div>
+
+              <div class="gallery-item">
+                <img src="images/scroll 2.jpg" alt="Youth Fellowship">
+                <div class="gallery-overlay">
+                  <h4>Youth Fellowship</h4>
+                  <p>AY outdoor rally and choir fellowship</p>
+                </div>
+              </div>
+
+              <div class="gallery-item">
+                <img src="images/scroll 3.jpg" alt="Women Ministries Retreat">
+                <div class="gallery-overlay">
+                  <h4>Women Ministries</h4>
+                  <p>Sisterhood in prayer and community care</p>
+                </div>
+              </div>
+
+              <div class="gallery-item">
+                <img src="images/scroll 4.jpg" alt="Prophecy Seminar">
+                <div class="gallery-overlay">
+                  <h4>Prophecy & Scripture</h4>
+                  <p>Evangelistic meetings in Hima</p>
+                </div>
+              </div>
+
+              <div class="gallery-item">
+                <img src="images/scroll 5.jpg" alt="Church Grounds">
+                <div class="gallery-overlay">
+                  <h4>Church Sanctuary</h4>
+                  <p>Hima Seventh-day Adventist Church</p>
+                </div>
+              </div>
+
+              <div class="gallery-item">
+                <img src="images/scroll 6.jpg" alt="SDA World Church">
+                <div class="gallery-overlay">
+                  <h4>World Church Emblem</h4>
+                  <p>Open Bible, Flame, and Cross</p>
+                </div>
+              </div>
+
+              <div class="gallery-item">
+                <img src="images/bell.png" alt="Church Bell">
+                <div class="gallery-overlay">
+                  <h4>Call to Worship</h4>
+                  <p>Church bell tolling for Sabbath School</p>
+                </div>
+              </div>
+
+              <div class="gallery-item">
+                <img src="images/scroll 7.jpg" alt="Church Bell">
+                <div class="gallery-overlay">
+                  <h4>Call to Worship</h4>
+                  <p>Church bell tolling for Sabbath School</p>
+                </div>
+              </div>
+              <div class="gallery-item">
+                <img src="images/scroll 8.jpg" alt="Church Bell">
+                <div class="gallery-overlay">
+                  <h4>Call to Worship</h4>
+                  <p>Church bell tolling for Sabbath School</p>
+                </div>
+              </div>
+              <div class="gallery-item">
+                <img src="images/scroll 8.jpg" alt="Church Bell">
+                <div class="gallery-overlay">
+                  <h4>Call to Worship</h4>
+                  <p>Church bell tolling for Sabbath School</p>
+                </div>
+              </div>
+              <div class="gallery-item">
+                <img src="images/scroll 9.jpg" alt="Church Bell">
+                <div class="gallery-overlay">
+                  <h4>Call to Worship</h4>
+                  <p>Church bell tolling for Sabbath School</p>
+                </div>
+              </div>
+              <div class="gallery-item">
+                <img src="images/scroll 10.jpg" alt="Church Bell">
+                <div class="gallery-overlay">
+                  <h4>Call to Worship</h4>
+                  <p>Church bell tolling for Sabbath School</p>
+                </div>
+              </div>
+              <div class="gallery-item">
+                <img src="images/scroll 11.jpg" alt="Church Bell">
+                <div class="gallery-overlay">
+                  <h4>Call to Worship</h4>
+                  <p>Church bell tolling for Sabbath School</p>
+                </div>
+              </div>
+              <div class="gallery-item">
+                <img src="images/scroll 12.jpg" alt="Church Bell">
+                <div class="gallery-overlay">
+                  <h4>Call to Worship</h4>
+                  <p>Church bell tolling for Sabbath School</p>
+                </div>
+              </div>
+              <div class="gallery-item">
+                <img src="images/scroll 13.jpg" alt="Church Bell">
+                <div class="gallery-overlay">
+                  <h4>Call to Worship</h4>
+                  <p>Church bell tolling for Sabbath School</p>
+                </div>
+              </div>
+              <div class="gallery-item">
+                <img src="images/scroll 14.jpg" alt="Church Bell">
+                <div class="gallery-overlay">
+                  <h4>Call to Worship</h4>
+                  <p>Church bell tolling for Sabbath School</p>
+                </div>
+              </div>
+              <div class="gallery-item">
+                <img src="images/scroll 15.jpg" alt="Church Bell">
+                <div class="gallery-overlay">
+                  <h4>Call to Worship</h4>
+                  <p>Church bell tolling for Sabbath School</p>
+                </div>
+              </div>
+              <div class="gallery-item">
+                <img src="images/scroll 16.jpg" alt="Church Bell">
+                <div class="gallery-overlay">
+                  <h4>Call to Worship</h4>
+                  <p>Church bell tolling for Sabbath School</p>
+                </div>
+              </div>
+              <div class="gallery-item">
+                <img src="images/scroll 17.jpg" alt="Church Bell">
+                <div class="gallery-overlay">
+                  <h4>Call to Worship</h4>
+                  <p>Church bell tolling for Sabbath School</p>
+                </div>
+              </div>
+              <div class="gallery-item">
+                <img src="images/scroll 18.jpg" alt="Church Bell">
+                <div class="gallery-overlay">
+                  <h4>Call to Worship</h4>
+                  <p>Church bell tolling for Sabbath School</p>
+                </div>
+              </div>
+              <div class="gallery-item">
+                <img src="images/scroll 19.jpg" alt="Church Bell">
+                <div class="gallery-overlay">
+                  <h4>Call to Worship</h4>
+                  <p>Church bell tolling for Sabbath School</p>
+                </div>
+              </div>
+              <div class="gallery-item">
+                <img src="images/scroll 20.jpg" alt="Church Bell">
+                <div class="gallery-overlay">
+                  <h4>Call to Worship</h4>
+                  <p>Church bell tolling for Sabbath School</p>
+                </div>
+              </div>
+              <div class="gallery-item">
+                <img src="images/scroll 21.jpg" alt="Church Bell">
+                <div class="gallery-overlay">
+                  <h4>Call to Worship</h4>
+                  <p>Church bell tolling for Sabbath School</p>
+                </div>
+              </div>
+              <div class="gallery-item">
+                <img src="images/scroll 22.jpg" alt="Church Bell">
+                <div class="gallery-overlay">
+                  <h4>Call to Worship</h4>
+                  <p>Church bell tolling for Sabbath School</p>
+                </div>
+              </div>
+              <div class="gallery-item">
+                <img src="images/scroll 23.jpg" alt="Church Bell">
+                <div class="gallery-overlay">
+                  <h4>Call to Worship</h4>
+                  <p>Church bell tolling for Sabbath School</p>
+                </div>
+              </div>
+              <div class="gallery-item">
+                <img src="images/scroll 24.jpg" alt="Church Bell">
+                <div class="gallery-overlay">
+                  <h4>Call to Worship</h4>
+                  <p>Church bell tolling for Sabbath School</p>
+                </div>
+              </div>
+              <div class="gallery-item">
+                <img src="images/scroll 25.jpg" alt="Church Bell">
+                <div class="gallery-overlay">
+                  <h4>Call to Worship</h4>
+                  <p>Church bell tolling for Sabbath School</p>
+                </div>
+              </div>
+              <div class="gallery-item">
+                <img src="images/scroll 26.jpg" alt="Church Bell">
+                <div class="gallery-overlay">
+                  <h4>Call to Worship</h4>
+                  <p>Church bell tolling for Sabbath School</p>
+                </div>
+              </div>
+              <div class="gallery-item">
+                <img src="images/scroll 27.jpg" alt="Church Bell">
+                <div class="gallery-overlay">
+                  <h4>Call to Worship</h4>
+                  <p>Church bell tolling for Sabbath School</p>
+                </div>
+              </div>
+              <div class="gallery-item">
+                <img src="images/scroll 28.jpg" alt="Church Bell">
+                <div class="gallery-overlay">
+                  <h4>Call to Worship</h4>
+                  <p>Church bell tolling for Sabbath School</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab 3: Audio & Hymns -->
+          <div class="tab-content" id="audio">
+            <div class="section-header">
+              <span class="section-tag">Praise & Worship</span>
+              <h2 class="section-title">Adventist Hymns & Pathfinder Anthems</h2>
+            </div>
+
+            <!-- Audio Player -->
+            <div class="audio-player-card">
+              <div class="player-info">
+                <div class="player-icon"><i class="fa fa-music" aria-hidden="true"></i></div>
+                <div class="player-meta">
+                  <h4>We Have This Hope (SDA Hymnal #214)</h4>
+                  <p>Congregational Choir • Hima SDA Church</p>
+                </div>
+              </div>
+              <div class="player-progress-bar">
+                <div class="player-progress-fill"></div>
+              </div>
+              <div class="player-times">
+                <span class="current-time">1:15</span>
+                <span class="total-duration">3:15</span>
+              </div>
+              <div class="player-controls">
+                <button class="play-toggle-btn" aria-label="Play/Pause"><i class="fa fa-play" aria-hidden="true"></i></button>
+              </div>
+              <div
+                style="margin-top:20px; padding:15px; background:rgba(255,255,255,0.1); border-radius:var(--radius-md); font-size:0.92rem; text-align:center;">
+                “We have this hope that burns within our hearts,<br>
+                Hope in the coming of the Lord.<br>
+                We have this faith that Christ alone imparts,<br>
+                Faith in the promise of His Word!”
+              </div>
+            </div>
+
+            <div class="grid-3" style="margin-top:30px;">
+              <div class="card" style="padding:18px;">
+                <h4 style="color:var(--color-primary); margin-bottom:6px;"><i class="fa fa-music" aria-hidden="true"></i> The Pathfinder Song</h4>
+                <p style="font-size:0.85rem; color:var(--color-text-muted); margin-bottom:12px;">“Oh, we are the
+                  Pathfinders strong...”</p>
+                <button class="btn btn-sm btn-secondary" onclick="showToast('Loaded: The Pathfinder Song')">Select
+                  Track</button>
+              </div>
+
+              <div class="card" style="padding:18px;">
+                <h4 style="color:var(--color-primary); margin-bottom:6px;"><i class="fa fa-music" aria-hidden="true"></i> Faith of Our Fathers (#304)</h4>
+                <p style="font-size:0.85rem; color:var(--color-text-muted); margin-bottom:12px;">Traditional hymn of
+                  Christian courage and steadfastness.</p>
+                <button class="btn btn-sm btn-secondary" onclick="showToast('Loaded: Faith of Our Fathers')">Select
+                  Track</button>
+              </div>
+
+              <div class="card" style="padding:18px;">
+                <h4 style="color:var(--color-primary); margin-bottom:6px;"><i class="fa fa-music" aria-hidden="true"></i> Day by Day (#532)</h4>
+                <p style="font-size:0.85rem; color:var(--color-text-muted); margin-bottom:12px;">Comforting prayer hymn
+                  of daily trust in Jesus.</p>
+                <button class="btn btn-sm btn-secondary" onclick="showToast('Loaded: Day by Day')">Select Track</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab 4: Weekly Bulletins -->
+          <div class="tab-content" id="bulletins">
+            <div class="section-header">
+              <span class="section-tag">Order of Service</span>
+              <h2 class="section-title">Weekly Church Bulletins</h2>
+              <p class="section-subtitle">Stay updated with this Sabbath's order of worship, announcements, and duty
+                rosters.</p>
+            </div>
+
+            <div class="grid-2">
+              <div class="card" style="padding:24px;">
+                <h3 style="color:var(--color-primary); margin-bottom:10px;">This Sabbath's Worship Bulletin</h3>
+                <ul
+                  style="list-style:disc; padding-left:20px; color:var(--color-text-muted); font-size:0.92rem; display:flex; flex-direction:column; gap:6px; margin-bottom:18px;">
+                  <li><strong>Theme:</strong> “Walking by Faith in God's Promises”</li>
+                  <li><strong>Sabbath School Superintendent:</strong> Elder on Duty</li>
+                  <li><strong>Preacher:</strong> District Pastor</li>
+                  <li><strong>AY Program:</strong> Pathfinder Drill &amp; Honors Showcase (2:30 PM)</li>
+                </ul>
+                <button class="btn btn-primary btn-sm"
+                  onclick="showToast('Downloading Sabbath Order of Service PDF...')">Download Bulletin (PDF) <i class="fa fa-download" aria-hidden="true"></i></button>
+              </div>
+
+              <div class="card" style="padding:24px;">
+                <h3 style="color:var(--color-primary); margin-bottom:10px;">Quarterly Duty Roster</h3>
+                <p style="color:var(--color-text-muted); font-size:0.92rem; margin-bottom:18px;">
+                  Schedule of church elders, deacons, deaconesses, Sabbath school superintendents, and music choristers
+                  for this quarter.
+                </p>
+                <button class="btn btn-secondary btn-sm" onclick="showToast('Downloading Church Roster...')">View Duty
+                  Roster <i class="fa fa-list-alt" aria-hidden="true"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Interactive Lightbox Modal -->
+  <div class="lightbox-modal" role="dialog" aria-modal="true" aria-label="Photo Lightbox">
+    <div class="lightbox-content">
+      <button class="lightbox-close" aria-label="Close lightbox">&times;</button>
+      <button class="lightbox-nav lightbox-prev" aria-label="Previous photo"><i class="fa fa-chevron-left" aria-hidden="true"></i></button>
+      <img src="" alt="Enlarged photo" class="lightbox-img">
+      <div class="lightbox-caption"></div>
+      <button class="lightbox-nav lightbox-next" aria-label="Next photo"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+    </div>
+  </div>
+
+  <!-- Search Modal -->
+  <div class="search-modal" role="dialog" aria-modal="true" aria-label="Site Search">
+    <div class="search-dialog">
+      <div class="search-header">
+        <span class="search-icon"><i class="fa fa-search" aria-hidden="true"></i></span>
+        <input type="text" id="site-search-input" class="search-input" placeholder="Search media, sermons..."
+          autocomplete="off">
+        <button class="search-close-btn" aria-label="Close search">&times;</button>
+      </div>
+      <div class="search-results" id="search-results-list"></div>
+    </div>
+  </div>
+
+  <button class="back-to-top" title="Scroll to top"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <img src="images/sad logo.png" alt="Logo">
+            <h3>Hima SDA Media</h3>
+          </div>
+          <p>Sharing the gospel through word, song, and inspirational visual media.</p>
+          <div class="footer-socials">
+            <a href="#" class="footer-social-link" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            <a href="#" class="footer-social-link" title="YouTube"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+            <a href="https://wa.me/256700000000" class="footer-social-link" title="WhatsApp"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+            <a href="mailto:himasdachurch@gmail.com" class="footer-social-link" title="Email"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer-title">Media Categories</h4>
+          <ul class="footer-links">
+            <li><a href="#sermons"><i class="fa fa-angle-right" aria-hidden="true"></i> Sermon Videos</a></li>
+            <li><a href="#gallery"><i class="fa fa-angle-right" aria-hidden="true"></i> Photo Gallery</a></li>
+            <li><a href="#audio"><i class="fa fa-angle-right" aria-hidden="true"></i> Hymns &amp; Anthems</a></li>
+            <li><a href="#bulletins"><i class="fa fa-angle-right" aria-hidden="true"></i> Church Bulletins</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html"><i class="fa fa-angle-right" aria-hidden="true"></i> Home</a></li>
+            <li><a href="about.html"><i class="fa fa-angle-right" aria-hidden="true"></i> About Us</a></li>
+            <li><a href="resources.html"><i class="fa fa-angle-right" aria-hidden="true"></i> Resources</a></li>
+            <li><a href="staff & contact.html"><i class="fa fa-angle-right" aria-hidden="true"></i> Staff &amp; Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Worship Hours</h4>
+          <div class="meeting-schedule-card">
+            <ul class="meeting-schedule">
+              <li><span>Sabbath School:</span> <strong>Sat 9:00 AM</strong></li>
+              <li><span>Divine Service:</span> <strong>Sat 11:00 AM</strong></li>
+              <li><span>AY &amp; Media:</span> <strong>Sat 2:30 PM</strong></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 Hima SDA Church Media Department. All Rights Reserved.</div>
+        <div class="footer-bottom-links">
+          <a href="about.html"><i class="fa fa-book" aria-hidden="true"></i> Beliefs</a>
+          <a href="resources.html"><i class="fa fa-file-text-o" aria-hidden="true"></i> Resources</a>
+          <a href="staff & contact.html"><i class="fa fa-phone" aria-hidden="true"></i> Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
