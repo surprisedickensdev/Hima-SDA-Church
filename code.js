@@ -3,6 +3,7 @@
  * Interactive Web Application Engine (code.js)
  */
 
+
 const SUPABASE_URL = "https://yfuxlmntkkvkpzokfxtz.supabase.co";
 const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_IlNjlOQsQS0GlZdlKhNbvQ_QGRqxZJ6";
 
@@ -21,6 +22,7 @@ function getSupabaseClient() {
 
   return window.himaSupabaseClient;
 }
+
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -448,7 +450,10 @@ function initSearch() {
       renderResults(searchDatabase);
       return;
     }
+
     const filtered = searchDatabase.filter(item =>
+
+
       item.title.toLowerCase().includes(query) ||
       item.desc.toLowerCase().includes(query) ||
       item.category.toLowerCase().includes(query)
@@ -523,6 +528,7 @@ function showToast(message) {
   }, 4000);
 }
 
+
 function initForms() {
   document.querySelectorAll('form').forEach(form => {
     form.addEventListener('submit', async (e) => {
@@ -553,13 +559,14 @@ function initForms() {
         form.classList.contains('club-registration-form') ||
         form.id === 'club-registration-form';
 
-      // Save prayer requests and contact messages to Supabase.
       if (isPrayer) {
         const button = form.querySelector('[type="submit"]');
-        const originalText = button.textContent;
+        const originalText = button ? button.textContent : '';
 
-        button.disabled = true;
-        button.textContent = 'Sending...';
+        if (button) {
+          button.disabled = true;
+          button.textContent = 'Sending...';
+        }
 
         try {
           const db = getSupabaseClient();
@@ -590,18 +597,23 @@ function initForms() {
           console.error('Connection error:', error);
           showToast('Connection problem. Please try again later.');
         } finally {
-          button.disabled = false;
-          button.textContent = originalText;
+          if (button) {
+            button.disabled = false;
+            button.textContent = originalText;
+          }
         }
 
         return;
       }
 
-      // Preserve existing behaviour for other forms for now.
       if (isRegistration) {
-        showToast('Registration received! A club leader will contact you soon.');
+        showToast(
+          'Registration received! A club leader will contact you soon.'
+        );
       } else {
-        showToast('Thank you! Your message has been sent to Hima SDA Church.');
+        showToast(
+          'Thank you! Your message has been sent to Hima SDA Church.'
+        );
       }
 
       form.reset();
