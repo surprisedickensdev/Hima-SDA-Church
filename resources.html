@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Church Resources - Hima SDA Church</title>
+    <meta name="description"
+        content="Access the Seventh-day Adventist Church Manual, Elders Handbook, General Conference Yearly Program, and Sabbath School lessons.">
+    <link rel="icon" type="image/png" href="images/sad logo.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="code.js" defer></script>
+
+    <style>
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .resource-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+
+        .resource-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary);
+        }
+
+        .resource-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .resource-icon-box {
+            width: 48px;
+            height: 48px;
+            border-radius: var(--radius-sm);
+            background: rgba(183, 28, 28, 0.1);
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            flex-shrink: 0;
+        }
+
+        .resource-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--navy);
+            line-height: 1.3;
+        }
+
+        .resource-desc {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            margin-bottom: 1.25rem;
+            flex: 1;
+            line-height: 1.6;
+        }
+
+        .resource-meta {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 0.78rem;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+            padding-top: 0.6rem;
+            border-top: 1px dashed var(--border);
+        }
+
+        .resource-badge {
+            background: var(--surface-alt);
+            color: var(--navy);
+            padding: 0.2rem 0.6rem;
+            border-radius: var(--radius-full);
+            font-weight: 600;
+            border: 1px solid var(--border);
+        }
+
+        .resource-actions {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .pdf-preview-frame {
+            width: 100%;
+            height: 70vh;
+            border: none;
+            border-radius: var(--radius-sm);
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-contact">
+                <span>Church Resources & Leadership Guides</span>
+                <span><i class="fa fa-map-marker" aria-hidden="true"></i> Hima, Kasese, Uganda</span>
+            </div>
+            <div class="top-bar-actions">
+                <span>Biblical Guidelines & Manuals</span>
+                <a href="#" class="search-trigger-btn"><i class="fa fa-search" aria-hidden="true"></i> Search
+                    (Ctrl+K)</a>
+            </div>
+        </div>
+    </div>
+
+    <header class="site-header">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="brand-identity">
+                    <img src="images/sad logo.png" alt="Logo" class="logo-img">
+                    <div class="brand-text">
+                        <h1>Hima SDA Church</h1>
+                        <div class="subtext">Resources & Handbooks</div>
+                    </div>
+                </a>
+
+                <nav class="desktop-nav">
+                    <div class="nav-item"><a href="index.html" class="nav-link">Home</a></div>
+                    <div class="nav-item"><a href="about.html" class="nav-link">About Us</a></div>
+                    <div class="nav-item">
+                        <a href="ministries.html" class="nav-link dropdown-trigger">Ministries <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="pathfinder club.html" class="dropdown-item">Pathfinder Club</a>
+                            <a href="adventurer club.html" class="dropdown-item">Adventurer Club</a>
+                            <a href="Ambassador club.html" class="dropdown-item">Ambassador Club</a>
+                            <a href="youth.html" class="dropdown-item">Adventist Youth (AY)</a>
+                            <a href="women.html" class="dropdown-item">Women's Ministries</a>
+                            <a href="communty.html" class="dropdown-item">Community Service</a>
+                        </div>
+                    </div>
+                    <div class="nav-item"><a href="resources.html" class="nav-link active">Resources</a></div>
+                    <div class="nav-item"><a href="media.html" class="nav-link">Media</a></div>
+                    <div class="nav-item"><a href="staff & contact.html" class="nav-link">Staff & Contact</a></div>
+                    <div class="nav-item"><a href="more.html" class="nav-link">More</a></div>
+                </nav>
+
+                <div class="header-actions">
+                    <button class="btn-icon search-trigger-btn"><i class="fa fa-search" aria-hidden="true"></i></button>
+                    <button class="hamburger-btn"><span></span><span></span><span></span></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-backdrop"></div>
+    <aside class="mobile-nav-drawer">
+        <div class="mobile-drawer-header">
+            <strong>Church Resources</strong>
+            <button class="mobile-drawer-close">&times;</button>
+        </div>
+        <div class="mobile-nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="resources.html" class="active">Resources & Manuals</a>
+            <a href="ministries.html">Ministries</a>
+            <a href="media.html">Media</a>
+            <a href="staff & contact.html">Staff & Contact</a>
+        </div>
+    </aside>
+
+    <section class="page-hero">
+        <div class="container">
+            <h1>Church Resources & Documents</h1>
+            <p>Official publications, governance manuals, study materials, and club handbooks to equip members and
+                leaders for fruitful ministry.</p>
+            <div class="breadcrumbs">
+                <a href="index.html">Home</a> <span>/</span> <span>Resources</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAIN WRAPPER -->
+    <main class="main-wrapper">
+
+            <!-- CONTROLS & SEARCH BAR -->
+            <div class="controls-bar">
+                <div class="filter-pills">
+                    <button class="filter-pill resource-filter-pill active" data-filter="all">
+                        <i class="fa fa-th"></i> All Resources (14)
+                    </button>
+                    <button class="filter-pill resource-filter-pill" data-filter="curriculum">
+                        <i class="fa fa-graduation-cap"></i> Curriculum & MG
+                    </button>
+                    <button class="filter-pill resource-filter-pill" data-filter="honors">
+                        <i class="fa fa-certificate"></i> Honors & Outdoor Skills
+                    </button>
+                    <button class="filter-pill resource-filter-pill" data-filter="spirituality">
+                        <i class="fa fa-heart"></i> Spirit of Prophecy
+                    </button>
+                    <button class="filter-pill resource-filter-pill" data-filter="church">
+                        <i class="fa fa-university"></i> Church & Ceremonies
+                    </button>
+                </div>
+
+                <div class="search-input-wrapper">
+                    <i class="fa fa-search"></i>
+                    <input type="text" id="resourceSearchInput" class="search-input"
+                        placeholder="Search books, honors, manuals...">
+                </div>
+            </div>
+
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1.5rem;">
+                <h2 style="font-size:1.6rem; color:var(--navy);">Document Repository</h2>
+                <span id="resourceCountDisplay"
+                    style="color:var(--text-muted); font-size:0.9rem; font-weight:600;">Showing 14 resources</span>
+            </div>
+
+            <!-- RESOURCES GRID -->
+            <div class="resources-grid">
+
+                <!-- 1. Positive Church in a Negative World -->
+                <div class="resource-card" data-category="church">
+                    <div class="resource-header">
+                        <div class="resource-icon-box"><i class="fa fa-file-pdf-o"></i></div>
+                        <div>
+                            <h3 class="resource-title">A Positive Church in a Negative World</h3>
+                            <span class="resource-badge">Church Ministry</span>
+                        </div>
+                    </div>
+                    <p class="resource-desc">
+                        Inspirational leadership guide on maintaining optimistic faith, outreach boldness, and
+                        transformative Christian witness in modern society.
+                    </p>
+                    <div class="resource-meta">
+                        <span>Format: PDF</span>
+                        <span>Size: ~511 KB</span>
+                    </div>
+                    <div class="resource-actions">
+                        <button class="btn btn-outline btn-sm"
+                            data-preview-pdf="A Positive Church in a Negative World.pdf"
+                            data-title="A Positive Church in a Negative World"
+                            style="color:var(--navy); border-color:var(--border);">
+                            <i class="fa fa-eye"></i> Preview
+                        </button>
+                        <a href="A Positive Church in a Negative World.pdf" download class="btn btn-primary btn-sm"
+                            style="flex:1;">
+                            <i class="fa fa-download"></i> Download
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 2. Club Ministry Training (CMT) -->
+                <div class="resource-card" data-category="curriculum">
+                    <div class="resource-header">
+                        <div class="resource-icon-box"><i class="fa fa-shield"></i></div>
+                        <div>
+                            <h3 class="resource-title">Club Ministry Training (CMT 2022)</h3>
+                            <span class="resource-badge">Staff Training</span>
+                        </div>
+                    </div>
+                    <p class="resource-desc">
+                        Comprehensive training manual for Adventurer and Pathfinder club counselors, directors, mentors,
+                        and executive officers.
+                    </p>
+                    <div class="resource-meta">
+                        <span>Format: PDF</span>
+                        <span>Size: ~7.3 MB</span>
+                    </div>
+                    <div class="resource-actions">
+                        <button class="btn btn-outline btn-sm" data-preview-pdf="CMT-2022.pdf"
+                            data-title="Club Ministry Training (CMT 2022)"
+                            style="color:var(--navy); border-color:var(--border);">
+                            <i class="fa fa-eye"></i> Preview
+                        </button>
+                        <a href="CMT-2022.pdf" download class="btn btn-primary btn-sm" style="flex:1;">
+                            <i class="fa fa-download"></i> Download
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 3. Master Guide Curriculum Manual -->
+                <div class="resource-card" data-category="curriculum">
+                    <div class="resource-header">
+                        <div class="resource-icon-box"><i class="fa fa-graduation-cap"></i></div>
+                        <div>
+                            <h3 class="resource-title">Master Guide Curriculum Manual</h3>
+                            <span class="resource-badge">Leadership</span>
+                        </div>
+                    </div>
+                    <p class="resource-desc">
+                        The authoritative portfolio requirements, prerequisites, reading lists, and practical seminars
+                        for Master Guide candidate investiture.
+                    </p>
+                    <div class="resource-meta">
+                        <span>Format: PDF</span>
+                        <span>Size: ~1.3 MB</span>
+                    </div>
+                    <div class="resource-actions">
+                        <button class="btn btn-outline btn-sm" data-preview-pdf="MG-curriculum-manual (1).pdf"
+                            data-title="Master Guide Curriculum Manual"
+                            style="color:var(--navy); border-color:var(--border);">
+                            <i class="fa fa-eye"></i> Preview
+                        </button>
+                        <a href="MG-curriculum-manual (1).pdf" download class="btn btn-primary btn-sm" style="flex:1;">
+                            <i class="fa fa-download"></i> Download
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 4. Master Guide Portfolio Guide -->
+                <div class="resource-card" data-category="curriculum">
+                    <div class="resource-header">
+                        <div class="resource-icon-box"><i class="fa fa-book"></i></div>
+                        <div>
+                            <h3 class="resource-title">Master Guide Portfolio Guide</h3>
+                            <span class="resource-badge">Investiture Guide</span>
+                        </div>
+                    </div>
+                    <p class="resource-desc">
+                        Step-by-step checklist, documentation templates, and portfolio review standards for completing
+                        your Master Guide journey.
+                    </p>
+                    <div class="resource-meta">
+                        <span>Format: PDF</span>
+                        <span>Size: ~111 KB</span>
+                    </div>
+                    <div class="resource-actions">
+                        <button class="btn btn-outline btn-sm" data-preview-pdf="Master Guide Portfolio Guide.pdf"
+                            data-title="Master Guide Portfolio Guide"
+                            style="color:var(--navy); border-color:var(--border);">
+                            <i class="fa fa-eye"></i> Preview
+                        </button>
+                        <a href="Master Guide Portfolio Guide.pdf" download class="btn btn-primary btn-sm"
+                            style="flex:1;">
+                            <i class="fa fa-download"></i> Download
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 5. Honors Book 2014 -->
+                <div class="resource-card" data-category="honors">
+                    <div class="resource-header">
+                        <div class="resource-icon-box"><i class="fa fa-certificate"></i></div>
+                        <div>
+                            <h3 class="resource-title">Pathfinder Honors Book (Complete)</h3>
+                            <span class="resource-badge">Honors & Badges</span>
+                        </div>
+                    </div>
+                    <p class="resource-desc">
+                        The complete official encyclopedia of Pathfinder honors covering Arts, Crafts, Nature, Outdoor
+                        Industries, Health, and Science.
+                    </p>
+                    <div class="resource-meta">
+                        <span>Format: PDF</span>
+                        <span>Size: ~3.8 MB</span>
+                    </div>
+                    <div class="resource-actions">
+                        <button class="btn btn-outline btn-sm" data-preview-pdf="Honors_Book_2014.pdf"
+                            data-title="Pathfinder Honors Book" style="color:var(--navy); border-color:var(--border);">
+                            <i class="fa fa-eye"></i> Preview
+                        </button>
+                        <a href="Honors_Book_2014.pdf" download class="btn btn-primary btn-sm" style="flex:1;">
+                            <i class="fa fa-download"></i> Download
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 6. Acts of the Apostles -->
+                <div class="resource-card" data-category="spirituality">
+                    <div class="resource-header">
+                        <div class="resource-icon-box"><i class="fa fa-bookmark"></i></div>
+                        <div>
+                            <h3 class="resource-title">The Acts of the Apostles</h3>
+                            <span class="resource-badge">Ellen G. White</span>
+                        </div>
+                    </div>
+                    <p class="resource-desc">
+                        Inspiring chronicle of the early Christian church, the apostolic zeal of Peter and Paul, and the
+                        power of the Holy Spirit.
+                    </p>
+                    <div class="resource-meta">
+                        <span>Format: PDF</span>
+                        <span>Size: ~1.2 MB</span>
+                    </div>
+                    <div class="resource-actions">
+                        <button class="btn btn-outline btn-sm" data-preview-pdf="acts of apostles.pdf"
+                            data-title="The Acts of the Apostles - Ellen G. White"
+                            style="color:var(--navy); border-color:var(--border);">
+                            <i class="fa fa-eye"></i> Preview
+                        </button>
+                        <a href="acts of apostles.pdf" download class="btn btn-primary btn-sm" style="flex:1;">
+                            <i class="fa fa-download"></i> Download
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 7. The Great Controversy -->
+                <div class="resource-card" data-category="spirituality">
+                    <div class="resource-header">
+                        <div class="resource-icon-box"><i class="fa fa-bookmark"></i></div>
+                        <div>
+                            <h3 class="resource-title">The Great Controversy</h3>
+                            <span class="resource-badge">Ellen G. White</span>
+                        </div>
+                    </div>
+                    <p class="resource-desc">
+                        Traces the cosmic battle between Christ and Satan from the fall of Jerusalem, through the
+                        Reformation, to Christ’s glorious return.
+                    </p>
+                    <div class="resource-meta">
+                        <span>Format: PDF</span>
+                        <span>Size: ~1.8 MB</span>
+                    </div>
+                    <div class="resource-actions">
+                        <button class="btn btn-outline btn-sm" data-preview-pdf="great controversy.pdf"
+                            data-title="The Great Controversy - Ellen G. White"
+                            style="color:var(--navy); border-color:var(--border);">
+                            <i class="fa fa-eye"></i> Preview
+                        </button>
+                        <a href="great controversy.pdf" download class="btn btn-primary btn-sm" style="flex:1;">
+                            <i class="fa fa-download"></i> Download
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 8. Prophets and Kings -->
+                <div class="resource-card" data-category="spirituality">
+                    <div class="resource-header">
+                        <div class="resource-icon-box"><i class="fa fa-bookmark"></i></div>
+                        <div>
+                            <h3 class="resource-title">Prophets and Kings</h3>
+                            <span class="resource-badge">Ellen G. White</span>
+                        </div>
+                    </div>
+                    <p class="resource-desc">
+                        The history of Israel from King Solomon’s glory through captivity and restoration, highlighting
+                        God’s faithfulness to His covenant.
+                    </p>
+                    <div class="resource-meta">
+                        <span>Format: PDF</span>
+                        <span>Size: ~1.7 MB</span>
+                    </div>
+                    <div class="resource-actions">
+                        <button class="btn btn-outline btn-sm" data-preview-pdf="prophets and kings.pdf"
+                            data-title="Prophets and Kings - Ellen G. White"
+                            style="color:var(--navy); border-color:var(--border);">
+                            <i class="fa fa-eye"></i> Preview
+                        </button>
+                        <a href="prophets and kings.pdf" download class="btn btn-primary btn-sm" style="flex:1;">
+                            <i class="fa fa-download"></i> Download
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 9. Uniforms & Ceremonies -->
+                <div class="resource-card" data-category="church">
+                    <div class="resource-header">
+                        <div class="resource-icon-box"><i class="fa fa-flag"></i></div>
+                        <div>
+                            <h3 class="resource-title">Uniforms & Ceremonies Manual</h3>
+                            <span class="resource-badge">Regalia Standards</span>
+                        </div>
+                    </div>
+                    <p class="resource-desc">
+                        Official General Conference regulations on dress uniforms, insignia placement, scarf, sash
+                        badges, flag ceremonies, and drills.
+                    </p>
+                    <div class="resource-meta">
+                        <span>Format: PDF</span>
+                        <span>Size: ~12 MB</span>
+                    </div>
+                    <div class="resource-actions">
+                        <button class="btn btn-outline btn-sm" data-preview-pdf="Uniforms & Ceremonies.pdf"
+                            data-title="Uniforms & Ceremonies Manual"
+                            style="color:var(--navy); border-color:var(--border);">
+                            <i class="fa fa-eye"></i> Preview
+                        </button>
+                        <a href="Uniforms & Ceremonies.pdf" download class="btn btn-primary btn-sm" style="flex:1;">
+                            <i class="fa fa-download"></i> Download
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 10. Knot Tying Honor -->
+                <div class="resource-card" data-category="honors">
+                    <div class="resource-header">
+                        <div class="resource-icon-box"><i class="fa fa-link"></i></div>
+                        <div>
+                            <h3 class="resource-title">Knot Tying & Pioneering Honor</h3>
+                            <span class="resource-badge">Outdoor Skills</span>
+                        </div>
+                    </div>
+                    <p class="resource-desc">
+                        Detailed visual diagram guide to mastering bends, hitches, lashings, loop knots, rescue knots,
+                        and rope care.
+                    </p>
+                    <div class="resource-meta">
+                        <span>Format: PDF</span>
+                        <span>Size: ~8.1 MB</span>
+                    </div>
+                    <div class="resource-actions">
+                        <button class="btn btn-outline btn-sm" data-preview-pdf="knot.pdf"
+                            data-title="Knot Tying & Pioneering Honor"
+                            style="color:var(--navy); border-color:var(--border);">
+                            <i class="fa fa-eye"></i> Preview
+                        </button>
+                        <a href="knot.pdf" download class="btn btn-primary btn-sm" style="flex:1;">
+                            <i class="fa fa-download"></i> Download
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 11. Fire Building & Camp Cookery -->
+                <div class="resource-card" data-category="honors">
+                    <div class="resource-header">
+                        <div class="resource-icon-box"><i class="fa fa-fire"></i></div>
+                        <div>
+                            <h3 class="resource-title">Fire Building & Camp Cookery</h3>
+                            <span class="resource-badge">Outdoor Skills</span>
+                        </div>
+                    </div>
+                    <p class="resource-desc">
+                        Learn fire safety, tinder preparation, teepee and log cabin fire designs, camp stove management,
+                        and healthy outdoor cooking.
+                    </p>
+                    <div class="resource-meta">
+                        <span>Format: PDF</span>
+                        <span>Size: ~3.1 MB</span>
+                    </div>
+                    <div class="resource-actions">
+                        <button class="btn btn-outline btn-sm" data-preview-pdf="FIRE_BUILDING(1).pdf"
+                            data-title="Fire Building & Camp Cookery"
+                            style="color:var(--navy); border-color:var(--border);">
+                            <i class="fa fa-eye"></i> Preview
+                        </button>
+                        <a href="FIRE_BUILDING(1).pdf" download class="btn btn-primary btn-sm" style="flex:1;">
+                            <i class="fa fa-download"></i> Download
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 12. Backpacking Honor -->
+                <div class="resource-card" data-category="honors">
+                    <div class="resource-header">
+                        <div class="resource-icon-box"><i class="fa fa-compass"></i></div>
+                        <div>
+                            <h3 class="resource-title">Backpacking Honor Guide</h3>
+                            <span class="resource-badge">Wilderness Trekking</span>
+                        </div>
+                    </div>
+                    <p class="resource-desc">
+                        Preparation, trail gear selection, trail etiquette, packing weight distribution, navigation, and
+                        leave-no-trace wilderness skills.
+                    </p>
+                    <div class="resource-meta">
+                        <span>Format: PDF</span>
+                        <span>Size: ~2.7 MB</span>
+                    </div>
+                    <div class="resource-actions">
+                        <button class="btn btn-outline btn-sm" data-preview-pdf="MGO_BackpackingHonor (1).pdf"
+                            data-title="Backpacking Honor Guide" style="color:var(--navy); border-color:var(--border);">
+                            <i class="fa fa-eye"></i> Preview
+                        </button>
+                        <a href="MGO_BackpackingHonor (1).pdf" download class="btn btn-primary btn-sm" style="flex:1;">
+                            <i class="fa fa-download"></i> Download
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 13. Senior Youth Leadership (SYL) -->
+                <div class="resource-card" data-category="curriculum">
+                    <div class="resource-header">
+                        <div class="resource-icon-box"><i class="fa fa-users"></i></div>
+                        <div>
+                            <h3 class="resource-title">Senior Youth Leadership (SYL)</h3>
+                            <span class="resource-badge">Senior Youth</span>
+                        </div>
+                    </div>
+                    <p class="resource-desc">
+                        Comprehensive curriculum designed for Ambassadors and Young Adults training to become visionary
+                        youth mentors and church leaders.
+                    </p>
+                    <div class="resource-meta">
+                        <span>Format: PDF</span>
+                        <span>Size: ~2.8 MB</span>
+                    </div>
+                    <div class="resource-actions">
+                        <button class="btn btn-outline btn-sm" data-preview-pdf="SYL18-Final-HIGHres.pdf"
+                            data-title="Senior Youth Leadership (SYL)"
+                            style="color:var(--navy); border-color:var(--border);">
+                            <i class="fa fa-eye"></i> Preview
+                        </button>
+                        <a href="SYL18-Final-HIGHres.pdf" download class="btn btn-primary btn-sm" style="flex:1;">
+                            <i class="fa fa-download"></i> Download
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 14. World Church Calendar 2026 -->
+                <div class="resource-card" data-category="church">
+                    <div class="resource-header">
+                        <div class="resource-icon-box"><i class="fa fa-calendar"></i></div>
+                        <div>
+                            <h3 class="resource-title">Special Days & Events Calendar 2026</h3>
+                            <span class="resource-badge">Calendar</span>
+                        </div>
+                    </div>
+                    <p class="resource-desc">
+                        General Conference schedule for World Pathfinder Day, Global Youth Day, Camporees, and youth
+                        weeks of prayer.
+                    </p>
+                    <div class="resource-meta">
+                        <span>Format: PDF</span>
+                        <span>Size: ~71 KB</span>
+                    </div>
+                    <div class="resource-actions">
+                        <button class="btn btn-outline btn-sm"
+                            data-preview-pdf="Calendar-of-Special-Days-and-Events-World-2026 (2).pdf"
+                            data-title="Special Days & Events Calendar 2026"
+                            style="color:var(--navy); border-color:var(--border);">
+                            <i class="fa fa-eye"></i> Preview
+                        </button>
+                        <a href="Calendar-of-Special-Days-and-Events-World-2026 (2).pdf" download
+                            class="btn btn-primary btn-sm" style="flex:1;">
+                            <i class="fa fa-download"></i> Download
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- EXTERNAL DIGITAL ARCHIVE LINK -->
+            <section
+                style="margin-top: 3.5rem; background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%); border-radius: var(--radius-lg); padding: 2.25rem; color:#fff; display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:1.5rem; border:1px solid rgba(245,158,11,0.3);">
+                <div>
+                    <span
+                        style="color:var(--accent); font-weight:700; text-transform:uppercase; font-size:0.85rem; letter-spacing:1px;">Online
+                        Research Library</span>
+                    <h3 style="font-size:1.6rem; margin:0.35rem 0 0.5rem;">Ellen G. White Estate Online Writings</h3>
+                    <p style="color:#cbd5e1; font-size:0.95rem; max-width:650px;">
+                        Search over 100,000 pages of published writings, devotions, letters, and Sabbath readings in
+                        English and Luganda on the official Ellen G. White Estate platform.
+                    </p>
+                </div>
+                <div>
+                    <a href="https://ellenwhite.org/" target="_blank" class="btn btn-accent"><i
+                            class="fa fa-external-link"></i> Visit EGW Online</a>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- INTERACTIVE PDF PREVIEW MODAL -->
+        <div id="pdfPreviewModal" class="custom-modal">
+            <div class="modal-dialog" style="max-width: 900px; width: 95%;">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="pdfPreviewTitle"><i class="fa fa-file-text-o"></i> Document Preview</h3>
+                    <button class="modal-close-btn" data-close-modal>&times;</button>
+                </div>
+                <div class="modal-body" style="padding: 0.5rem;">
+                    <iframe id="pdfPreviewIframe" class="pdf-preview-frame" src=""></iframe>
+                </div>
+                <div class="modal-footer">
+                    <a id="pdfModalDownloadBtn" href="" download class="btn btn-primary btn-sm">
+                        <i class="fa fa-download"></i> Download File
+                    </a>
+                    <button class="btn btn-outline btn-sm" data-close-modal
+                        style="color:var(--navy); border-color:var(--border);">Close</button>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <section>
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Authorized Publications</span>
+                    <h2 class="section-title">Official Church Reference Library</h2>
+                </div>
+
+                <div class="grid-3">
+                    <!-- 1. Elders Handbook -->
+                    <div class="card" id="handbook">
+                        <div class="card-body">
+                            <span
+                                style="background:var(--color-primary); color:white; font-size:0.75rem; font-weight:700; padding:4px 10px; border-radius:var(--radius-full); align-self:flex-start; margin-bottom:12px;">Leadership</span>
+                            <h3 class="card-title">1. Seventh-day Adventist Elder's Handbook</h3>
+                            <p class="card-text">
+                                Essential guide prepared by the Ministerial Association of the General Conference.
+                                Outlines the spiritual qualifications, pastoral visitation guidelines, leading church
+                                worship, conducting communion, and church board administration.
+                            </p>
+                            <div class="card-footer">
+                                <a href="#handbook-details" class="btn btn-sm btn-primary">Read Key Principles →</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2. Church Manual -->
+                    <div class="card" id="manual">
+                        <div class="card-body">
+                            <span
+                                style="background:var(--color-secondary); color:#000; font-size:0.75rem; font-weight:700; padding:4px 10px; border-radius:var(--radius-full); align-self:flex-start; margin-bottom:12px;">Governance</span>
+                            <h3 class="card-title">2. Seventh-day Adventist Church Manual</h3>
+                            <p class="card-text">
+                                The authoritative manual defining church organization, election of officers, financial
+                                accountability, baptism criteria, church discipline, and preserving unity across world
+                                congregations.
+                            </p>
+                            <div class="card-footer">
+                                <a href="#manual-details" class="btn btn-sm btn-primary">Read Key Principles →</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3. GC Yearly Program -->
+                    <div class="card" id="program">
+                        <div class="card-body">
+                            <span
+                                style="background:var(--color-accent-red); color:white; font-size:0.75rem; font-weight:700; padding:4px 10px; border-radius:var(--radius-full); align-self:flex-start; margin-bottom:12px;">Global
+                                Calendar</span>
+                            <h3 class="card-title">3. GC Yearly Calendar of Special Days</h3>
+                            <p class="card-text">
+                                Official calendar published by the General Conference listing global emphasis Sabbaths:
+                                Religious Liberty, Global Youth Day, Education Day, Pathfinder Day, and 13th Sabbath
+                                Offerings.
+                            </p>
+                            <div class="card-footer">
+                                <a href="#calendar-details" class="btn btn-sm btn-primary">View Highlights →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Detailed Interactive Accordions for Resources -->
+        <section class="section-muted" id="handbook-details">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">In-Depth Reference</span>
+                    <h2 class="section-title">Manual Summaries & Guidelines</h2>
+                    <p class="section-subtitle">Click below to expand guidelines for church leaders, elders, and club
+                        directors.</p>
+                </div>
+
+                <div class="accordion" data-single="false">
+                    <div class="accordion-item active">
+                        <div class="accordion-header">
+                            <span>Elder's Handbook: Roles and Responsibilities</span>
+                            <span class="accordion-icon"><i class="fa fa-chevron-down" aria-hidden="true"></i></span>
+                        </div>
+                        <div class="accordion-body">
+                            <p style="margin-bottom:10px;"><strong>Spiritual Leadership:</strong> The local church elder
+                                is called to be a spiritual shepherd alongside the district pastor. Key responsibilities
+                                include:</p>
+                            <ul
+                                style="list-style:disc; padding-left:20px; display:flex; flex-direction:column; gap:6px;">
+                                <li>Leading meaningful, Christ-centered Sabbath worship and preaching sound doctrine.
+                                </li>
+                                <li>Conducting communion services (Ordinance of Humility and Lord's Supper) with
+                                    reverence.</li>
+                                <li>Faithful pastoral care: visiting members, the sick, and encouraging backsliders.
+                                </li>
+                                <li>Presiding over church business sessions in harmony with the Church Manual.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+
+
+
+                    <div class="accordion-item" id="manual-details">
+                        <div class="accordion-header">
+                            <span>General Conference Yearly Program:</span>
+                            <span class="accordion-icon"><i class="fa fa-chevron-down" aria-hidden="true"></i></span>
+                        </div>
+                        <div class="accordion-body">
+                            <p style="margin-bottom:10px;"><strong>Calender of Events</strong>
+
+                            </P>
+                           
+                            <P>
+<b>
+                                 CALENDAR OF SPECIAL DAYS & EVENTS — WORLD 2027</b>
+                            </P>
+                            <br>
+                            <P>
+                                
+                                <b>JANUARY</b><br>
+                                2 — Quarterly Day of Prayer — R&RCom<br>
+                                6-16 — Ten Days of Prayer — GC-MIN<br>
+                                9 — #Health Ministries — GC-HM/DIV<br>
+                                16 — Religious Liberty Day — GC/NAD-PARL<br>
+                                23
+                                30
+                            </P><br>
+                            <P>
+                                <b>FEBRUARY </b><br>
+                                6 — Reach the World: Personal Outreach — GC-SSPM<br>
+                                13-20 — Christian Home and Marriage Week — GC-FM<br>
+                                27
+                            </P><br>
+                            <P>
+                            <b>MARCH </b><br>
+                            6 — Women’s Day of Prayer — GC-WM<br>
+                            13 — Adventist World Radio — GC-AWR<br>
+                            20-27 — Youth Week of Prayer — GC-YOU<br>
+                            20 — Global Youth Day / Global Children’s Day — GC-YOU/CHM<br>
+                            27 — #Christian Education — Divisions<br>
+                            </P><br> 
+                            <P>
+                            <b>APRIL </b><br>
+                            3 — Quarterly Day of Prayer — R&RCom<br>
+                            3 — World Ambassador Day — GC-YOU<br>
+                            10-16 — #Literature Evangelism Rally Week — Divisions<br>
+                            10 — Friends of Hope Day (Visitor’s Day) — GC-SSPM<br>
+                            10 — Hope Channel International — GC-HCI<br>
+                            10 — World Impact Day — for Distribution of Missionary Book — Divisions<br>
+                            17 — Possibility Ministries Day — GC-APM<br>
+                            24
+                            </P><br>
+                            <P>
+                             <b>MAY</b><br>
+                            1-29 — Drug Awareness Month — GC-HM<br>
+                            1 — Reach the World: Using Communication Channels — GC-COM<br>
+                            8
+                            15 — Global Adventurer’s Day — GC-YOU<br>
+                            22 — World Day of Prayer for Children at Risk — GC-CHM<br>
+                            29
+                            </P><br>
+                            <P>
+                             <b>JUNE</b><br>
+                            5 — Reach the World: Bible Study: Sabbath School and Correspondence Courses — GC-SSPM<br>
+                            12 — Women’s Ministries Emphasis Day — GC-WM<br>
+                            19 — Reach the World: Nurturing Other Members and Reclaiming — GC-SSPM<br>
+                            19 — Adventist Church World Refugee Day — ADRA<br>
+                            26 — World Public Campus Ministries Day — GC-YOU<br>
+                            </P><br> 
+                            <P>
+                            <b>JULY</b><br>
+                            3 — Quarterly Day of Prayer — R&RCom<br>
+                            10 — Missions Promotion — GC-AM<br>
+                            17 — Reach the World: Media Ministry — GC-COM<br>
+                            24 — Children’s Sabbath — GC-CHM<br>
+                            31
+                            </P><br>
+                            <P>
+                             <b>AUGUST</b><br>
+                            7 — #Global Mission Evangelism — Divisions<br>
+                            14 — Reach the World: Church Planting — GC-AM<br>
+                            21 — Education Day — GC-EDU<br>
+                            28 — enditnow Day — GC-WM<br>
+                            28 — #Lay Evangelism — Divisions<br>
+                            </P><br>
+                            <P>
+                           <b> SEPTEMBER </b><br>
+                            4 — #Youth Spiritual and Mission Commitment Day — Divisions<br>
+                            5-11 — Family Togetherness Week of Prayer — GC-FM<br>
+                            11 — Family Togetherness Day of Prayer — GC-FM<br>
+                            11 — Mission Promotion — GC-AM<br>
+                            18 — Pathfinder Day — GC-YOU<br>
+                            25 — #Sabbath School Guest Day — Divisions<br>
+                            </P><br>
+                            <P>
+                            <b>OCTOBER </b><br>
+                            2 — Quarterly Day of Prayer — R&RCom<br>
+                            2 — Adventist Review Subscription Promotion — GC-ARMies<br>
+                            9 — Pastor Appreciation Day — GC-MIN<br>
+                            16 — Spirit of Prophecy and Adventist Heritage — GC-WHT<br>
+                            23 — Creation Sabbath — Faith&ScCou<br>
+                            30
+                            </P><br>
+                            <P>
+                           <b> NOVEMBER </b><br>
+                            6-13 — Week of Prayer — GC-ARMies <br>
+                            13-19 — e-Week of Prayer for Youth and Young Adults — GC-YOU <br>
+                            13 — Mission Promotion: Annual Sacrifice — GC-AM<br>
+                            20 — World Orphans-Vulnerable Children Day — GC-APM<br>
+                            27 — HIV/AIDS Awareness — GC-AAIM<br>
+                            27-Dec 4 — Stewardship Revival Week — GC-STW<br>
+                            </P><br>
+                            <P>
+                                <b> DECEMBER</b><br>
+                                4 — Annual Stewardship Sabbath — GC-STW<br>
+                                11 — #Health Emphasis — GC-HM/DIV<br>
+                                18
+                                25
+                            <p><br>
+                            <p>
+                                = Divisions to prepare materials
+                                Materials: https://gc.adventist.org/events/special-days
+
+                            </p>
+
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+                    <div class="accordion-item" id="manual-details">
+                        <div class="accordion-header">
+                            <span>Church Manual: Core Governance &amp; Ordinances</span>
+                            <span class="accordion-icon"><i class="fa fa-chevron-down" aria-hidden="true"></i></span>
+                        </div>
+                        <div class="accordion-body">
+                            <p style="margin-bottom:10px;"><strong>Why a Church Manual?</strong> God is a God of order
+                                (1 Corinthians 14:40). The Church Manual exists to protect biblical truth, establish
+                                fair democratic church processes, and ensure that every local church operates in harmony
+                                with the global body of believers.</p>
+                            <p>Key chapters include Membership qualifications, Officers and their duties, Church Board
+                                authority, Finance &amp; Tithes, and Marriage and Divorce guidelines.</p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item" id="calendar-details">
+                        <div class="accordion-header">
+                            <span>General Conference Special Emphasis Sabbaths</span>
+                            <span class="accordion-icon"><i class="fa fa-chevron-down" aria-hidden="true"></i></span>
+                        </div>
+                        <div class="accordion-body">
+                            <ul
+                                style="list-style:disc; padding-left:20px; display:flex; flex-direction:column; gap:6px;">
+                                <li><strong>March:</strong> Global Youth Day (GYD) &amp; Youth Week of Prayer.</li>
+                                <li><strong>May:</strong> Christian Home &amp; Marriage Week.</li>
+                                <li><strong>September:</strong> World Pathfinder Day (Investiture &amp; Uniform Inspection).
+                                </li>
+                                <li><strong>October:</strong> Pastor Appreciation Day &amp; Creation Sabbath.</li>
+                                <li><strong>Quarterly:</strong> 13th Sabbath Mission Projects (East-Central Africa
+                                    Division).</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item" id="pathfinder-resources">
+                        <div class="accordion-header">
+                            <span>Pathfinder &amp; Adventurer Leadership Curriculum</span>
+                            <span class="accordion-icon"><i class="fa fa-chevron-down" aria-hidden="true"></i></span>
+                        </div>
+                        <div class="accordion-body">
+                            Access guidelines for earning over 450 Pathfinder Honors across Nature, Outdoor Survival,
+                            Vocational, and Arts. Downloadable guidelines for camping safety, knot tying standards,
+                            uniform insignia placement, and drill maneuvers.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Search Modal -->
+    <div class="search-modal" role="dialog" aria-modal="true" aria-label="Site Search">
+        <div class="search-dialog">
+            <div class="search-header">
+                <span class="search-icon"><i class="fa fa-search" aria-hidden="true"></i></span>
+                <input type="text" id="site-search-input" class="search-input" placeholder="Search resources..."
+                    autocomplete="off">
+                <button class="search-close-btn" aria-label="Close search">&times;</button>
+            </div>
+            <div class="search-results" id="search-results-list"></div>
+        </div>
+    </div>
+
+    <button class="back-to-top" title="Scroll to top"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="images/sad logo.png" alt="Logo">
+                        <h3>Hima SDA Church</h3>
+                    </div>
+                    <p>Equipping saints for the work of ministry and the edifying of the body of Christ.</p>
+                    <div class="footer-socials">
+                        <a href="#" class="footer-social-link" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        <a href="#" class="footer-social-link" title="YouTube"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+                        <a href="https://wa.me/256700000000" class="footer-social-link" title="WhatsApp"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+                        <a href="mailto:himasdachurch@gmail.com" class="footer-social-link" title="Email"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="footer-title">Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="#handbook"><i class="fa fa-angle-right" aria-hidden="true"></i> Elders Handbook</a></li>
+                        <li><a href="#manual"><i class="fa fa-angle-right" aria-hidden="true"></i> Church Manual</a></li>
+                        <li><a href="#program"><i class="fa fa-angle-right" aria-hidden="true"></i> GC Yearly Program</a></li>
+                        <li><a href="#pathfinder-resources"><i class="fa fa-angle-right" aria-hidden="true"></i> Pathfinder Manuals</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html"><i class="fa fa-angle-right" aria-hidden="true"></i> Home</a></li>
+                        <li><a href="about.html"><i class="fa fa-angle-right" aria-hidden="true"></i> About Us</a></li>
+                        <li><a href="media.html"><i class="fa fa-angle-right" aria-hidden="true"></i> Media</a></li>
+                        <li><a href="staff & contact.html"><i class="fa fa-angle-right" aria-hidden="true"></i> Staff &amp; Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Worship Schedule</h4>
+                    <div class="meeting-schedule-card">
+                        <ul class="meeting-schedule">
+                            <li><span>Sabbath School:</span> <strong>Sat 9:00 AM</strong></li>
+                            <li><span>Divine Worship:</span> <strong>Sat 11:00 AM</strong></li>
+                            <li><span>AY Program:</span> <strong>Sat 2:30 PM</strong></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div>&copy; 2026 Hima Seventh-day Adventist Church. All Rights Reserved.</div>
+                <div class="footer-bottom-links">
+                    <a href="about.html"><i class="fa fa-book" aria-hidden="true"></i> Beliefs</a>
+                    <a href="resources.html"><i class="fa fa-file-text-o" aria-hidden="true"></i> Resources</a>
+                    <a href="staff & contact.html"><i class="fa fa-phone" aria-hidden="true"></i> Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

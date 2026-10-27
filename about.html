@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Hima Seventh-day Adventist Church</title>
+  <meta name="description" content="Learn about Hima SDA Church, our history, mission, pastoral leadership, and fundamental biblical beliefs.">
+  <link rel="icon" type="image/png" href="images/sad logo.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="code.js" defer></script>
+</head>
+
+<body>
+
+  <!-- Top Utility Bar -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-bar-contact">
+        <span><i class="fa fa-map-marker" aria-hidden="true"></i> Hima, Kasese, Uganda</span>
+        <span><i class="fa fa-phone" aria-hidden="true"></i> +256 700 000 000</span>
+        <span><i class="fa fa-envelope-o" aria-hidden="true"></i>  himasdachurch@gmail.com</span>
+      </div>
+      <div class="top-bar-actions">
+        <span>Sabbath Worship: Saturday 9:00 AM</span>
+        <a href="#" class="search-trigger-btn"><i class="fa fa-search" aria-hidden="true"></i> Search (Ctrl+K)</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Site Header & Main Navigation -->
+  <header class="site-header">
+    <div class="container">
+      <div class="nav-wrapper">
+        <a href="index.html" class="brand-identity">
+          <img src="images/sad logo.png" alt="Hima SDA Logo" class="logo-img">
+          <div class="brand-text">
+            <h1>Hima SDA Church</h1>
+            <div class="subtext">Pathfinder & Youth Ministries</div>
+          </div>
+        </a>
+
+        <nav class="desktop-nav" aria-label="Main Navigation">
+          <div class="nav-item">
+            <a href="index.html" class="nav-link">Home</a>
+          </div>
+          <div class="nav-item">
+            <a href="about.html" class="nav-link active">About Us</a>
+          </div>
+          <div class="nav-item">
+            <a href="ministries.html" class="nav-link dropdown-trigger">Ministries <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+            <div class="dropdown-menu">
+              <a href="pathfinder club.html" class="dropdown-item">Pathfinder Club <span class="item-badge">Ages 10-15</span></a>
+              <a href="adventurer club.html" class="dropdown-item">Adventurer Club <span class="item-badge">Ages 4-9</span></a>
+              <a href="Ambassador club.html" class="dropdown-item">Ambassador Club <span class="item-badge">Ages 16-21</span></a>
+              <a href="youth.html" class="dropdown-item">Adventist Youth (AY)</a>
+              <a href="young adults.html" class="dropdown-item">Young Adults</a>
+              <a href="children.html" class="dropdown-item">Children Ministries</a>
+              <a href="women.html" class="dropdown-item">Women's Ministries</a>
+              <a href="communty.html" class="dropdown-item">Community Service</a>
+            </div>
+          </div>
+          <div class="nav-item">
+            <a href="resources.html" class="nav-link dropdown-trigger">Resources <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+            <div class="dropdown-menu">
+              <a href="resources.html#handbook" class="dropdown-item">Elders Handbook</a>
+              <a href="resources.html#manual" class="dropdown-item">Church Manual</a>
+              <a href="resources.html#program" class="dropdown-item">GC Yearly Program</a>
+              <a href="resources.html#sabbath-school" class="dropdown-item">Sabbath School Lessons</a>
+            </div>
+          </div>
+          <div class="nav-item">
+            <a href="media.html" class="nav-link">Media</a>
+          </div>
+          <div class="nav-item">
+            <a href="staff & contact.html" class="nav-link">Staff & Contact</a>
+          </div>
+          <div class="nav-item">
+            <a href="more.html" class="nav-link dropdown-trigger">More <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+            <div class="dropdown-menu">
+              <a href="more.html#events" class="dropdown-item">Calendar & Events</a>
+              <a href="more.html#announcements" class="dropdown-item">Announcements</a>
+              <a href="more.html#faqs" class="dropdown-item">Church FAQs</a>
+            </div>
+          </div>
+        </nav>
+
+        <div class="header-actions">
+          <button class="btn-icon search-trigger-btn" title="Search site (Ctrl+K)"><i class="fa fa-search" aria-hidden="true"></i></button>
+          <a href="pathfinder club.html#register" class="btn btn-secondary btn-sm">Join Club</a>
+          <button class="hamburger-btn" aria-label="Toggle navigation menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-backdrop"></div>
+  <aside class="mobile-nav-drawer" aria-label="Mobile Navigation">
+    <div class="mobile-drawer-header">
+      <div class="brand-identity">
+        <img src="images/sad logo.png" alt="Logo" style="width: 40px; height: 40px;">
+        <strong style="color:var(--color-primary);">Hima SDA</strong>
+      </div>
+      <button class="mobile-drawer-close" aria-label="Close menu">&times;</button>
+    </div>
+    <div class="mobile-nav-links">
+      <a href="index.html"> Home</a>
+      <a href="about.html" class="active"> About Us</a>
+      <div>
+        <button class="mobile-nav-dropdown-btn"><span> Ministries</span> <span class="arrow-icon"><i class="fa fa-chevron-down" aria-hidden="true"></i></span></button>
+        <div class="mobile-submenu">
+          <a href="pathfinder club.html"> Pathfinder Club</a>
+          <a href="adventurer club.html"> Adventurer Club</a>
+          <a href="Ambassador club.html"> Ambassador Club</a>
+          <a href="youth.html"> Adventist Youth (AY)</a>
+          <a href="young adults.html"> Young Adults</a>
+          <a href="children.html"> Children Ministries</a>
+          <a href="women.html"> Women's Ministries</a>
+          <a href="communty.html"> Community Services</a>
+        </div>
+      </div>
+      <div>
+        <button class="mobile-nav-dropdown-btn"><span> Resources</span> <span class="arrow-icon"><i class="fa fa-chevron-down" aria-hidden="true"></i></span></button>
+        <div class="mobile-submenu">
+          <a href="resources.html#handbook">Elders Handbook</a>
+          <a href="resources.html#manual">Church Manual</a>
+          <a href="resources.html#program">GC Yearly Program</a>
+        </div>
+      </div>
+      <a href="media.html"> Media & Sermons</a>
+      <a href="staff & contact.html"> Staff & Contact</a>
+      <a href="more.html"> Calendar & FAQs</a>
+    </div>
+  </aside>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <h1>About Hima SDA Church</h1>
+      <p>A worldwide family of believers united in Christ, proclaiming the Three Angels' Messages with love and purpose.</p>
+      <div class="breadcrumbs">
+        <a href="index.html">Home</a> <span>/</span> <span>About Us</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="main-wrapper">
+    <!-- History & Identity Section -->
+    <section>
+      <div class="container">
+        <div class="grid-2" style="align-items: center;">
+          <div>
+            <span class="section-tag">Our Heritage &amp; Calling</span>
+            <h2 class="section-title">Rooted in Scripture, Growing in Grace</h2>
+            <p style="color:var(--color-text-muted); font-size:1.05rem; margin-bottom:16px;">
+              <strong>Hima Seventh-day Adventist Church</strong> is part of the worldwide sisterhood of churches under the 
+              <strong>General Conference of Seventh-day Adventists</strong> (East-Central Africa Division, Western Uganda Field).
+            </p>
+            <p style="color:var(--color-text-muted); font-size:0.98rem; margin-bottom:16px;">
+              Located in the heart of Hima Town Council, Kasese District, our church serves as a sanctuary of spiritual peace, Christian brotherhood, and community transformation. We believe that God has called His church to be a light in dark times, presenting the saving grace of Jesus and preparing a people for His imminent return.
+            </p>
+            <p style="color:var(--color-text-muted); font-size:0.98rem; margin-bottom:24px;">
+              From our vibrant Sabbath worship to our dedicated Pathfinder and youth clubs, every program exists to deepen faith in Christ and encourage practical godliness.
+            </p>
+            <a href="staff & contact.html" class="btn btn-primary">Meet Our Church Leaders <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+          </div>
+
+          <div>
+            <div style="border-radius:var(--radius-lg); overflow:hidden; box-shadow:var(--shadow-lg); border:1px solid var(--color-border);">
+              <img src="images/three angels message.png" alt="Three Angels Message" style="width:100%; height:auto;">
+              <div style="background:var(--color-surface); padding:20px; text-align:center;">
+                <h3 style="color:var(--color-primary); font-size:1.15rem; margin-bottom:4px;">The Three Angels' Messages</h3>
+                <p style="color:var(--color-text-muted); font-size:0.88rem;">Revelation 14:6-12 — The Everlasting Gospel for the Final Generation</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission, Vision & Values -->
+    <section class="section-muted">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Our Guiding Pillars</span>
+          <h2 class="section-title">Mission, Vision &amp; Core Values</h2>
+        </div>
+
+        <div class="grid-3">
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fa fa-bullseye" aria-hidden="true"></i></div>
+            <h3 style="font-size:1.25rem; color:var(--color-primary); margin-bottom:12px;">Our Mission</h3>
+            <p style="font-size:0.95rem; color:var(--color-text-muted);">
+              Make disciples of Jesus Christ who live as His loving witnesses and proclaim to all people the everlasting gospel of the Three Angels' Messages.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fa fa-wpexplorer" aria-hidden="true"></i></div>
+            <h3 style="font-size:1.25rem; color:var(--color-primary); margin-bottom:12px;">Our Vision</h3>
+            <p style="font-size:0.95rem; color:var(--color-text-muted);">
+              In harmony with Bible prophecy, see the church fully restored into Christ's image and prepared to meet our returning Lord and Savior with joy.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fa fa-heart" aria-hidden="true"></i></div>
+            <h3 style="font-size:1.25rem; color:var(--color-primary); margin-bottom:12px;">Our Values</h3>
+            <p style="font-size:0.95rem; color:var(--color-text-muted);">
+              Biblical faithfulness, selfless community service, Christlike humility, family enrichment, and empowering our youth for godly leadership.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive 28 Fundamental Beliefs Highlights Accordion -->
+    <section>
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Doctrinal Foundation</span>
+          <h2 class="section-title">What Seventh-day Adventists Believe</h2>
+          <p class="section-subtitle">Click on each core biblical doctrine to explore our beliefs grounded entirely in the Holy Scriptures.</p>
+        </div>
+
+        <div class="accordion" data-single="true">
+          <!-- Accordion Item 1 -->
+          <div class="accordion-item active">
+            <div class="accordion-header">
+              <span>1. The Holy Scriptures (Word of God)</span>
+              <span class="accordion-icon"><i class="fa fa-chevron-down" aria-hidden="true"></i></span>
+            </div>
+            <div class="accordion-body">
+              The Holy Scriptures, Old and New Testaments, are the written Word of God, given by divine inspiration through holy men of God who spoke and wrote as they were moved by the Holy Spirit. In this Word, God has committed to humanity the knowledge necessary for salvation. The Holy Scriptures are the infallible revelation of His will and the authoritative standard of character and doctrine (2 Timothy 3:16-17; 2 Peter 1:20-21; Psalm 119:105).
+            </div>
+          </div>
+
+          <!-- Accordion Item 2 -->
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <span>2. The Trinity (The Godhead)</span>
+              <span class="accordion-icon"><i class="fa fa-chevron-down" aria-hidden="true"></i></span>
+            </div>
+            <div class="accordion-body">
+              There is one God: Father, Son, and Holy Spirit, a unity of three co-eternal Persons. God is immortal, all-powerful, all-knowing, above all, and ever present. He is infinite and beyond human comprehension, yet known through His self-revelation. He is forever worthy of worship, adoration, and service by the whole creation (Deuteronomy 6:4; Matthew 28:19; 2 Corinthians 13:14).
+            </div>
+          </div>
+
+          <!-- Accordion Item 3 -->
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <span>3. The Life, Death &amp; Resurrection of Christ</span>
+              <span class="accordion-icon"><i class="fa fa-chevron-down" aria-hidden="true"></i></span>
+            </div>
+            <div class="accordion-body">
+              In Christ's life of perfect obedience to God's will, His suffering, death, and resurrection, God provided the only means of atonement for human sin. Those who by faith accept this atonement have eternal life, and the whole creation will better understand the infinite and holy love of the Creator (John 3:16; 1 Corinthians 15:3-4; Romans 5:6-10).
+            </div>
+          </div>
+
+          <!-- Accordion Item 4 -->
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <span>4. The Seventh-day Sabbath</span>
+              <span class="accordion-icon"><i class="fa fa-chevron-down" aria-hidden="true"></i></span>
+            </div>
+            <div class="accordion-body">
+              The gracious Creator, after the six days of Creation, rested on the seventh day and instituted the Sabbath for all people as a memorial of Creation. The fourth commandment of God's unchangeable law requires the observance of this seventh day (Saturday) as the day of rest, worship, and ministry in harmony with the teaching and practice of Jesus, the Lord of the Sabbath (Genesis 2:1-3; Exodus 20:8-11; Luke 4:16; Mark 2:27-28).
+            </div>
+          </div>
+
+          <!-- Accordion Item 5 -->
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <span>5. The Second Coming of Jesus</span>
+              <span class="accordion-icon"><i class="fa fa-chevron-down" aria-hidden="true"></i></span>
+            </div>
+            <div class="accordion-body">
+              The second coming of Christ is the blessed hope of the church, the grand climax of the gospel. The Savior's coming will be literal, personal, visible, and worldwide. When He returns, the righteous dead will be resurrected, and together with the righteous living will be glorified and taken to heaven, but the unrighteous will die (Titus 2:13; Hebrews 9:28; Revelation 1:7; 1 Thessalonians 4:13-18).
+            </div>
+          </div>
+
+          <!-- Accordion Item 6 -->
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <span>6. Christian Stewardship &amp; Health Living</span>
+              <span class="accordion-icon"><i class="fa fa-chevron-down" aria-hidden="true"></i></span>
+            </div>
+            <div class="accordion-body">
+              We are God's stewards, entrusted by Him with time and opportunities, abilities and possessions, and the blessings of the earth and its resources. We are called to be a godly people who think, feel, and act in harmony with biblical principles, treating our bodies as the temple of the Holy Spirit with proper nutrition, rest, and exercise (1 Corinthians 6:19-20; Malachi 3:8-12; 1 Corinthians 10:31).
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Search Modal -->
+  <div class="search-modal" role="dialog" aria-modal="true" aria-label="Site Search">
+    <div class="search-dialog">
+      <div class="search-header">
+        <span class="search-icon"><i class="fa fa-search" aria-hidden="true"></i></span>
+        <input type="text" id="site-search-input" class="search-input" placeholder="Type to search ministries, resources, events..." autocomplete="off">
+        <button class="search-close-btn" aria-label="Close search">&times;</button>
+      </div>
+      <div class="search-results" id="search-results-list"></div>
+    </div>
+  </div>
+
+  <button class="back-to-top" title="Scroll to top"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <img src="images/sad logo.png" alt="SDA Church Logo">
+            <h3>Hima SDA Church</h3>
+          </div>
+          <p>Seventh-day Adventist Church in Hima, Uganda. A loving spiritual sanctuary for families, children, and youth.</p>
+          <div class="footer-socials">
+            <a href="#" class="footer-social-link" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            <a href="#" class="footer-social-link" title="YouTube"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+            <a href="https://wa.me/256700000000" class="footer-social-link" title="WhatsApp"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+            <a href="mailto:himasdachurch@gmail.com" class="footer-social-link" title="Email"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html"><i class="fa fa-angle-right" aria-hidden="true"></i> Home</a></li>
+            <li><a href="about.html"><i class="fa fa-angle-right" aria-hidden="true"></i> About Us</a></li>
+            <li><a href="media.html"><i class="fa fa-angle-right" aria-hidden="true"></i> Media</a></li>
+            <li><a href="resources.html"><i class="fa fa-angle-right" aria-hidden="true"></i> Resources</a></li>
+            <li><a href="staff & contact.html"><i class="fa fa-angle-right" aria-hidden="true"></i> Staff &amp; Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Clubs &amp; Wings</h4>
+          <ul class="footer-links">
+            <li><a href="pathfinder club.html"><i class="fa fa-angle-right" aria-hidden="true"></i> Pathfinder Club</a></li>
+            <li><a href="adventurer club.html"><i class="fa fa-angle-right" aria-hidden="true"></i> Adventurer Club</a></li>
+            <li><a href="Ambassador club.html"><i class="fa fa-angle-right" aria-hidden="true"></i> Ambassador Club</a></li>
+            <li><a href="youth.html"><i class="fa fa-angle-right" aria-hidden="true"></i> Youth Ministries</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Meeting Times</h4>
+          <div class="meeting-schedule-card">
+            <ul class="meeting-schedule">
+              <li><span>Sabbath School:</span> <strong>Sat 9:00 AM</strong></li>
+              <li><span>Divine Service:</span> <strong>Sat 11:00 AM</strong></li>
+              <li><span>AY &amp; Pathfinders:</span> <strong>Sat 2:30 PM</strong></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 Hima Seventh-day Adventist Church. All Rights Reserved.</div>
+        <div class="footer-bottom-links">
+          <a href="about.html"><i class="fa fa-book" aria-hidden="true"></i> Beliefs</a>
+          <a href="resources.html"><i class="fa fa-file-text-o" aria-hidden="true"></i> Resources</a>
+          <a href="staff & contact.html"><i class="fa fa-phone" aria-hidden="true"></i> Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

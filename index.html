@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hima Seventh-day Adventist Church</title>
+  <meta name="description" content="Welcome to Hima SDA Church & Pathfinder Club. Proclaiming the Everlasting Gospel, nurturing youth in faith, character, and service.">
+  <link rel="icon" type="image/png" href="images/sad logo.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="code.js" defer></script>
+</head>
+
+<body>
+
+  <!-- Top Utility Bar -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-bar-contact">
+        <span><i class="fa fa-map-marker" aria-hidden="true"></i> Hima, Kasese, Uganda</span>
+        <span><i class="fa fa-phone" aria-hidden="true"></i> +256 700 000 000</span>
+        <span><i class="fa fa-envelope-o" aria-hidden="true"></i> himasdachurch@gmail.com</span>
+      </div>
+      <div class="top-bar-actions">
+        <span>Sabbath Worship: Saturday 9:00 AM</span>
+        <a href="#" class="search-trigger-btn"><i class="fa fa-search" aria-hidden="true""></i> Search (Ctrl+K)</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Site Header & Main Navigation -->
+  <header class="site-header">
+    <div class="container">
+      <div class="nav-wrapper">
+        <!-- Logo & Brand Identity -->
+        <a href="index.html" class="brand-identity">
+          <img src="images/sad logo.png" alt="Hima SDA Logo" class="logo-img">
+          <div class="brand-text">
+            <h1>Hima SDA Church</h1>
+            <div class="subtext">Pathfinder & Youth Ministries</div>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="desktop-nav" aria-label="Main Navigation">
+          <div class="nav-item">
+            <a href="index.html" class="nav-link active">Home</a>
+          </div>
+          <div class="nav-item">
+            <a href="about.html" class="nav-link">About Us</a>
+          </div>
+          <div class="nav-item">
+            <a href="ministries.html" class="nav-link dropdown-trigger">Ministries <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+            <div class="dropdown-menu">
+              <a href="pathfinder club.html" class="dropdown-item">Pathfinder Club <span class="item-badge">Ages 10-15</span></a>
+              <a href="adventurer club.html" class="dropdown-item">Adventurer Club <span class="item-badge">Ages 4-9</span></a>
+              <a href="Ambassador club.html" class="dropdown-item">Ambassador Club <span class="item-badge">Ages 16-21</span></a>
+              <a href="youth.html" class="dropdown-item">Adventist Youth (AY)</a>
+              <a href="young adults.html" class="dropdown-item">Young Adults</a>
+              <a href="children.html" class="dropdown-item">Children Ministries</a>
+              <a href="women.html" class="dropdown-item">Women's Ministries</a>
+              <a href="communty.html" class="dropdown-item">Community Service</a>
+            </div>
+          </div>
+          <div class="nav-item">
+            <a href="resources.html" class="nav-link dropdown-trigger">Resources <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+            <div class="dropdown-menu">
+              <a href="resources.html#handbook" class="dropdown-item">Elders Handbook</a>
+              <a href="resources.html#manual" class="dropdown-item">Church Manual</a>
+              <a href="resources.html#program" class="dropdown-item">GC Yearly Program</a>
+              <a href="resources.html#sabbath-school" class="dropdown-item">Sabbath School Lessons</a>
+              <a href="resources.html#pathfinder-resources" class="dropdown-item">Pathfinder Honors & Songs</a>
+            </div>
+          </div>
+          <div class="nav-item">
+            <a href="media.html" class="nav-link">Media</a>
+          </div>
+          <div class="nav-item">
+            <a href="staff & contact.html" class="nav-link">Staff & Contact</a>
+          </div>
+          <div class="nav-item">
+            <a href="more.html" class="nav-link dropdown-trigger">More <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+            <div class="dropdown-menu">
+              <a href="more.html#events" class="dropdown-item">Calendar & Events</a>
+              <a href="more.html#announcements" class="dropdown-item">Announcements</a>
+              <a href="more.html#faqs" class="dropdown-item">Church & Club FAQs</a>
+            </div>
+          </div>
+        </nav>
+
+        <!-- Header Actions -->
+        <div class="header-actions">
+          <button class="btn-icon search-trigger-btn" title="Search site (Ctrl+K)"><i class="fa fa-search" aria-hidden="true" style="color: aliceblue;height: 2px;"></i></button>
+          <a href="pathfinder club.html#register" class="btn btn-secondary btn-sm">Join Club</a>
+          <button class="hamburger-btn" aria-label="Toggle navigation menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-backdrop"></div>
+  <aside class="mobile-nav-drawer" aria-label="Mobile Navigation">
+    <div class="mobile-drawer-header">
+      <div class="brand-identity">
+        <img src="images/sad logo.png" alt="Logo" style="width: 40px; height: 40px;">
+        <div class="brand-text">
+          <strong style="color:var(--color-primary);">Hima SDA</strong>
+        </div>
+      </div>
+      <button class="mobile-drawer-close" aria-label="Close menu">&times;</button>
+    </div>
+    <div class="mobile-nav-links">
+      <a href="index.html" class="active"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+      <a href="about.html">About Us</a>
+      
+      <div>
+        <button class="mobile-nav-dropdown-btn">
+          <span>Ministries</span> <span class="arrow-icon"><i class="fa fa-chevron-down" aria-hidden="true"></i></span>
+        </button>
+        <div class="mobile-submenu">
+          <a href="pathfinder club.html">Pathfinder Club</a>
+          <a href="adventurer club.html">Adventurer Club</a>
+          <a href="Ambassador club.html">Ambassador Club</a>
+          <a href="youth.html">Adventist Youth (AY)</a>
+          <a href="young adults.html">Young Adults</a>
+          <a href="children.html">Children Ministries</a>
+          <a href="women.html">Women's Ministries</a>
+          <a href="communty.html">Community Services</a>
+        </div>
+      </div>
+
+      <div>
+        <button class="mobile-nav-dropdown-btn">
+          <span>Resources</span> <span class="arrow-icon"><i class="fa fa-chevron-down" aria-hidden="true"></i></span>
+        </button>
+        <div class="mobile-submenu">
+          <a href="resources.html#handbook">Elders Handbook</a>
+          <a href="resources.html#manual">Church Manual</a>
+          <a href="resources.html#program">GC Yearly Program</a>
+          <a href="resources.html#sabbath-school">Sabbath School Lesson</a>
+        </div>
+      </div>
+
+      <a href="media.html"> Media & Sermons</a>
+      <a href="staff & contact.html"> Staff & Contact</a>
+      <a href="more.html">Calendar & FAQs</a>
+    </div>
+    <div style="margin-top:auto; padding-top:20px; border-top:1px solid var(--color-border);">
+      <a href="staff & contact.html#prayer-request" class="btn btn-primary" style="width:100%;">Submit Prayer Request</a>
+    </div>
+  </aside>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container hero-content">
+      <span class="hero-badge">A Movement of Faith, Hope & Love</span>
+      <h2 class="hero-title">Welcome to <span class="highlight">Hima SDA Church</span></h2>
+      <p class="hero-description">
+        Committed to sharing the everlasting gospel of Jesus Christ, upholding biblical truth, and equipping our children and youth for joyful service in this world and the world to come.
+      </p>
+      <div class="hero-actions">
+        <a href="pathfinder club.html" class="btn btn-secondary">Explore Pathfinder Club</a>
+        <a href="about.html" class="btn btn-outline">Our Beliefs & Mission</a>
+        <a href="media.html" class="btn btn-outline">Watch Sermons & Media</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Next Sabbath Live Countdown Card -->
+  <div class="container">
+    <div class="countdown-card" id="sabbath-countdown-banner">
+      <div class="countdown-info">
+        <h3><i class="fa fa-hourglass-half" aria-hidden="true"></i> Countdown to Next Sabbath Service</h3>
+        <p>Join us this Saturday at 9:00 AM for Sabbath School & Divine Worship.</p>
+      </div>
+      <div class="countdown-timer">
+        <div class="countdown-item">
+          <div class="countdown-num" id="sabbath-days">00</div>
+          <div class="countdown-label">Days</div>
+        </div>
+        <div class="countdown-item">
+          <div class="countdown-num" id="sabbath-hours">00</div>
+          <div class="countdown-label">Hours</div>
+        </div>
+        <div class="countdown-item">
+          <div class="countdown-num" id="sabbath-minutes">00</div>
+          <div class="countdown-label">Mins</div>
+        </div>
+        <div class="countdown-item">
+          <div class="countdown-num" id="sabbath-seconds">00</div>
+          <div class="countdown-label">Secs</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Quick Stats Bar -->
+    <div class="container">
+      <div class="stats-bar">
+        <div class="stat-item">
+          <div class="stat-num">150+</div>
+          <div class="stat-text">Active Members</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">65+</div>
+          <div class="stat-text">Pathfinders & Adventurers</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">8</div>
+          <div class="stat-text">Active Ministry Wings</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">100%</div>
+          <div class="stat-text">Christ-Centered Mission</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Featured Ministries Section -->
+    <section>
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Empowering Every Generation</span>
+          <h2 class="section-title">Our Vibrant Church Ministries</h2>
+          <p class="section-subtitle">Discover dynamic clubs and departments designed to build spiritual strength, leadership skills, and loving fellowship.</p>
+        </div>
+
+        <div class="grid-3">
+          <!-- Card 1: Pathfinder Club -->
+          <div class="card">
+            <div class="card-img-wrapper">
+              <img src="images/379408-middle.png" alt="Pathfinder Club Emblem">
+              <span class="card-badge">Ages 10-15</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Hima Pathfinder Club</h3>
+              <p class="card-text">
+                Outdoor adventures, camping, community service, honors, and biblical character building for junior youth.
+              </p>
+              <div class="card-footer">
+                <a href="pathfinder club.html" class="btn btn-sm btn-primary">Learn More &amp; Pledge <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Adventurer Club -->
+          <div class="card">
+            <div class="card-img-wrapper">
+              <img src="images/sad logo.png" alt="Adventurer Club">
+              <span class="card-badge">Ages 4-9</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Adventurer Club</h3>
+              <p class="card-text">
+                Nurturing young children through faith discoveries, family bonding activities, nature exploration, and Bible crafts.
+              </p>
+              <div class="card-footer">
+                <a href="adventurer club.html" class="btn btn-sm btn-primary">Discover Adventurers <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Adventist Youth (AY) -->
+          <div class="card">
+            <div class="card-img-wrapper">
+              <img src="images/new1.jpg" alt="Youth Gathering">
+              <span class="card-badge">Youth &amp; Teens</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Adventist Youth Ministries</h3>
+              <p class="card-text">
+                Weekly Saturday afternoon AY programs, Bible bowl tournaments, musical worship, and evangelism outreach rallies.
+              </p>
+              <div class="card-footer">
+                <a href="youth.html" class="btn btn-sm btn-primary">View AY Programs <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4: Women's Ministries -->
+          <div class="card">
+            <div class="card-img-wrapper">
+              <img src="images/AWM LOGO.png" alt="Adventist Women Ministries">
+              <span class="card-badge">Women</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Women's Ministries</h3>
+              <p class="card-text">
+                Empowering women through prayer fellowships, spiritual mentorship, health education, and compassionate outreach.
+              </p>
+              <div class="card-footer">
+                <a href="women.html" class="btn btn-sm btn-primary">Explore AWM <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 5: Community Services -->
+          <div class="card">
+            <div class="card-img-wrapper">
+              <img src="images/GC.jpg" alt="Community Service">
+              <span class="card-badge">Outreach</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Community Service (ACS)</h3>
+              <p class="card-text">
+                Being the hands and feet of Jesus through disaster relief, food assistance, clothing drives, and medical mission camps in Hima.
+              </p>
+              <div class="card-footer">
+                <a href="communty.html" class="btn btn-sm btn-primary">Get Involved <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 6: Ambassador Club -->
+          <div class="card">
+            <div class="card-img-wrapper">
+              <img src="images/three angels message.png" alt="Three Angels Message">
+              <span class="card-badge">Ages 16-21</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Ambassador Club</h3>
+              <p class="card-text">
+                Guiding senior youth into mature Christian leadership, mission training, vocational growth, and dedicated discipleship.
+              </p>
+              <div class="card-footer">
+                <a href="Ambassador club.html" class="btn btn-sm btn-primary">Explore Ambassadors <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Worship Schedule & Service Times -->
+    <section class="section-muted">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Fellowship & Spiritual Growth</span>
+          <h2 class="section-title">Weekly Church Schedule</h2>
+          <p class="section-subtitle">Everyone is warmly welcomed to fellowship, worship, and study God's Word with us.</p>
+        </div>
+
+        <div class="grid-4">
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fa fa-book" aria-hidden="true"></i></div>
+            <h3 style="font-size: 1.15rem; color:var(--color-primary); margin-bottom:8px;">Sabbath School</h3>
+            <p style="font-weight:700; color:var(--color-secondary-hover); margin-bottom:10px;">Saturdays 9:00 AM</p>
+            <p style="font-size:0.88rem; color:var(--color-text-muted);">Interactive, in-depth biblical lesson study across all age divisions.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fa fa-university" aria-hidden="true"></i></div>
+            <h3 style="font-size: 1.15rem; color:var(--color-primary); margin-bottom:8px;">Divine Service</h3>
+            <p style="font-weight:700; color:var(--color-secondary-hover); margin-bottom:10px;">Saturdays 11:00 AM</p>
+            <p style="font-size:0.88rem; color:var(--color-text-muted);">Uplifting congregational singing, pastoral message, and joyful praise.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fa fa-compass" aria-hidden="true"></i></div>
+            <h3 style="font-size: 1.15rem; color:var(--color-primary); margin-bottom:8px;">AY &amp; Pathfinders</h3>
+            <p style="font-weight:700; color:var(--color-secondary-hover); margin-bottom:10px;">Saturdays 2:30 PM</p>
+            <p style="font-size:0.88rem; color:var(--color-text-muted);">Youth music, honors training, Bible drills, club parades, and missionary visits.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fa fa-heart" aria-hidden="true"></i></div>
+            <h3 style="font-size: 1.15rem; color:var(--color-primary); margin-bottom:8px;">Mid-Week Prayer</h3>
+            <p style="font-weight:700; color:var(--color-secondary-hover); margin-bottom:10px;">Wednesdays 6:00 PM</p>
+            <p style="font-size:0.88rem; color:var(--color-text-muted);">Mid-week spiritual renewal, testimonies, and intercessory prayer time.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Daily Scripture & Pathfinder Inspiration Generator -->
+    <section>
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><i class="fa fa-sun-o" aria-hidden="true"></i> Spiritual Uplift</span>
+          <h2 class="section-title">Daily Word of Inspiration</h2>
+          <p class="section-subtitle">Click below to receive an encouraging biblical promise or Pathfinder motto for your journey today.</p>
+        </div>
+
+        <div class="verse-box">
+          <blockquote id="daily-verse-text">“I can do all things through Christ who strengthens me.”</blockquote>
+          <cite id="daily-verse-ref">— Philippians 4:13</cite>
+          <div class="verse-actions">
+            <button id="new-verse-btn" class="btn btn-secondary btn-sm"><i class="fa fa-refresh" aria-hidden="true"></i> Generate New Verse</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick Prayer Request / Newsletter Section -->
+    <section class="section-muted">
+      <div class="container">
+        <div class="grid-2" style="align-items: center;">
+          <div>
+            <span class="section-tag"><i class="fa fa-envelope-open-o" aria-hidden="true"></i> We Are Here For You</span>
+            <h2 class="section-title">Need Prayer or Have Questions?</h2>
+            <p style="color:var(--color-text-muted); margin-bottom:20px; font-size:1.05rem;">
+              Our pastoral staff, church elders, and prayer band would be honored to lift your burdens and praises before the throne of God.
+            </p>
+            <ul style="margin-bottom:24px; color:var(--color-text-main); font-size:0.95rem; display:flex; flex-direction:column; gap:10px;">
+              <li><i class="fa fa-check-circle" style="color:var(--color-accent-green);" aria-hidden="true"></i> Completely confidential prayer ministry</li>
+              <li><i class="fa fa-check-circle" style="color:var(--color-accent-green);" aria-hidden="true"></i> Biblical counseling and pastoral visitations</li>
+              <li><i class="fa fa-check-circle" style="color:var(--color-accent-green);" aria-hidden="true"></i> Join our Pathfinder and Adventurer club families</li>
+            </ul>
+            <a href="staff & contact.html" class="btn btn-primary">Contact Church Leadership <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+          </div>
+
+          <div class="form-card">
+            <h3 style="font-size:1.3rem; color:var(--color-primary); margin-bottom:16px;">Send Quick Prayer Request</h3>
+            <form class="prayer-form">
+              <div class="form-group">
+                <label class="form-label" for="prayer-name">Your Name</label>
+                <input type="text" id="prayer-name" class="form-control" placeholder="Enter your full name" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="prayer-contact">Phone or Email</label>
+                <input type="text" id="prayer-contact" class="form-control" placeholder="How can we reach you?" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="prayer-msg">Prayer Request or Message</label>
+                <textarea id="prayer-msg" class="form-control" placeholder="Share your prayer request with us..." required></textarea>
+              </div>
+              <button type="submit" class="btn btn-secondary" style="width:100%;">Submit Request to Prayer Band</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Search Modal -->
+  <div class="search-modal" role="dialog" aria-modal="true" aria-label="Site Search">
+    <div class="search-dialog">
+      <div class="search-header">
+        <span class="search-icon"><i class="fa fa-search" aria-hidden="true"></i></span>
+        <input type="text" id="site-search-input" class="search-input" placeholder="Type to search ministries, resources, events..." autocomplete="off">
+        <button class="search-close-btn" aria-label="Close search">&times;</button>
+      </div>
+      <div class="search-results" id="search-results-list"></div>
+    </div>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" title="Scroll to top"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
+
+  <!-- Unified Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <img src="images/sad logo.png" alt="SDA Church Logo">
+            <h3>Hima SDA Church</h3>
+          </div>
+          <p>
+            Seventh-day Adventist Church in Hima, Uganda. Under the Western Uganda Field of the General Conference of Seventh-day Adventists. Preaching the everlasting gospel and Christ's soon return.
+          </p>
+          <div style="font-size:0.9rem; color:#cbd5e1; margin-bottom:15px;">
+            <i class="fa fa-map-marker text-secondary" style="color:var(--color-secondary); margin-right:6px;" aria-hidden="true"></i> Hima Town Council, Kasese District, Uganda
+          </div>
+          <div class="footer-socials">
+            <a href="#" class="footer-social-link" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            <a href="#" class="footer-social-link" title="YouTube"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+            <a href="https://wa.me/256700000000" class="footer-social-link" title="WhatsApp"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+            <a href="mailto:himasdachurch@gmail.com" class="footer-social-link" title="Email"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html"><i class="fa fa-angle-right" aria-hidden="true"></i> Home</a></li>
+            <li><a href="about.html"><i class="fa fa-angle-right" aria-hidden="true"></i> About Us</a></li>
+            <li><a href="media.html"><i class="fa fa-angle-right" aria-hidden="true"></i> Sermons &amp; Media</a></li>
+            <li><a href="resources.html"><i class="fa fa-angle-right" aria-hidden="true"></i> Church Resources</a></li>
+            <li><a href="staff & contact.html"><i class="fa fa-angle-right" aria-hidden="true"></i> Staff &amp; Contact</a></li>
+            <li><a href="more.html"><i class="fa fa-angle-right" aria-hidden="true"></i> Calendar &amp; Events</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Clubs &amp; Wings</h4>
+          <ul class="footer-links">
+            <li><a href="pathfinder club.html"><i class="fa fa-angle-right" aria-hidden="true"></i> Pathfinder Club</a></li>
+            <li><a href="adventurer club.html"><i class="fa fa-angle-right" aria-hidden="true"></i> Adventurer Club</a></li>
+            <li><a href="Ambassador club.html"><i class="fa fa-angle-right" aria-hidden="true"></i> Ambassador Club</a></li>
+            <li><a href="youth.html"><i class="fa fa-angle-right" aria-hidden="true"></i> Youth Ministries (AY)</a></li>
+            <li><a href="young adults.html"><i class="fa fa-angle-right" aria-hidden="true"></i> Young Adults</a></li>
+            <li><a href="women.html"><i class="fa fa-angle-right" aria-hidden="true"></i> Women's Ministries</a></li>
+            <li><a href="communty.html"><i class="fa fa-angle-right" aria-hidden="true"></i> Community Services</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Worship Hours</h4>
+          <div class="meeting-schedule-card">
+            <ul class="meeting-schedule">
+              <li><span>Sabbath School:</span> <strong>Saturdays 9:00 AM</strong></li>
+              <li><span>Divine Service:</span> <strong>Saturdays 11:00 AM</strong></li>
+              <li><span>AY &amp; Pathfinders:</span> <strong>Saturdays 2:30 PM</strong></li>
+              <li><span>Mid-Week Prayer:</span> <strong>Wednesdays 6:00 PM</strong></li>
+              <li><span>Vespers Service:</span> <strong>Fridays 6:00 PM</strong></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; <span id="current-year">2026</span> Hima Seventh-day Adventist Church &amp; Pathfinder Club. All Rights Reserved.
+        </div>
+        <div class="footer-bottom-links">
+          <a href="about.html"><i class="fa fa-book" aria-hidden="true"></i> Fundamental Beliefs</a>
+          <a href="resources.html"><i class="fa fa-file-text-o" aria-hidden="true"></i> Elders Handbook</a>
+          <a href="staff & contact.html"><i class="fa fa-phone" aria-hidden="true"></i> Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
