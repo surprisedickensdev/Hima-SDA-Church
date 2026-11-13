@@ -12,7 +12,8 @@
   <script src="code.js" defer></script>
 </head>
 
-<body>
+<body class="has-page-layout">
+  <div class="page-layout"><div class="page-content-area">
 
   <div class="top-bar">
     <div class="container">
@@ -30,56 +31,136 @@
   <header class="site-header">
     <div class="container">
       <div class="nav-wrapper">
+        <!-- Logo & Brand Identity -->
         <a href="index.html" class="brand-identity">
           <img src="images/sad logo.png" alt="Logo" class="logo-img">
           <div class="brand-text">
             <h1>Hima SDA Church</h1>
-            <div class="subtext">Events & FAQs</div>
+            <div class="subtext">Calendar & FAQs</div>
           </div>
         </a>
 
-        <nav class="desktop-nav">
-          <div class="nav-item"><a href="index.html" class="nav-link">Home</a></div>
-          <div class="nav-item"><a href="about.html" class="nav-link">About Us</a></div>
+        <nav class="desktop-nav" aria-label="Main Navigation">
+          <div class="nav-item">
+            <a href="index.html" class="nav-link">Home</a>
+          </div>
+          <div class="nav-item">
+            <a href="about.html" class="nav-link">About us</a>
+          </div>
+          <div class="nav-item">
+            <a href="staff & contact.html" class="nav-link">Staff & Contact</a>
+          </div>
           <div class="nav-item">
             <a href="ministries.html" class="nav-link dropdown-trigger">Ministries <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
             <div class="dropdown-menu">
-              <a href="pathfinder club.html" class="dropdown-item">Pathfinder Club</a>
-              <a href="adventurer club.html" class="dropdown-item">Adventurer Club</a>
-              <a href="Ambassador club.html" class="dropdown-item">Ambassador Club</a>
+              <a href="pathfinder club.html" class="dropdown-item">Pathfinder Club <span class="item-badge">Ages 10-15</span></a>
+              <a href="adventurer club.html" class="dropdown-item">Adventurer Club <span class="item-badge">Ages 4-9</span></a>
+              <a href="Ambassador club.html" class="dropdown-item">Ambassador Club <span class="item-badge">Ages 16-21</span></a>
+              <a href="public compus ministries.html" class="dropdown-item">Public Campus Ministries</a>
               <a href="youth.html" class="dropdown-item">Adventist Youth (AY)</a>
+              <a href="young adults.html" class="dropdown-item">Young Adults</a>
+              <a href="children.html" class="dropdown-item">Children Ministries</a>
               <a href="women.html" class="dropdown-item">Women's Ministries</a>
               <a href="communty.html" class="dropdown-item">Community Service</a>
             </div>
           </div>
-          <div class="nav-item"><a href="resources.html" class="nav-link">Resources</a></div>
-          <div class="nav-item"><a href="media.html" class="nav-link">Media</a></div>
-          <div class="nav-item"><a href="staff & contact.html" class="nav-link">Staff & Contact</a></div>
-          <div class="nav-item"><a href="more.html" class="nav-link active">More</a></div>
+          <div class="nav-item">
+            <a href="resources.html" class="nav-link dropdown-trigger">Resources <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+            <div class="dropdown-menu">
+              <a href="resources.html#handbook" class="dropdown-item">Elders Handbook</a>
+              <a href="resources.html#manual" class="dropdown-item">Church Manual</a>
+              <a href="resources.html#program" class="dropdown-item">GC Yearly Program</a>
+              <a href="resources.html#sabbath-school" class="dropdown-item">Sabbath School Lessons</a>
+              <a href="resources.html#pathfinder-resources" class="dropdown-item">Pathfinder Honors & Songs</a>
+            </div>
+          </div>
+          <div class="nav-item">
+            <a href="more.html" class="nav-link dropdown-trigger active">More <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+            <div class="dropdown-menu">
+              <a href="media.html" class="dropdown-item">Media & Sermons</a>
+              <a href="more.html#events" class="dropdown-item">Calendar & Events</a>
+              <a href="more.html#announcements" class="dropdown-item">Announcements</a>
+              <a href="more.html#faqs" class="dropdown-item">Church & Club FAQs</a>
+            </div>
+          </div>
         </nav>
 
         <div class="header-actions">
-          <button class="btn-icon search-trigger-btn"><i class="fa fa-search" aria-hidden="true"></i></button>
-          <button class="hamburger-btn"><span></span><span></span><span></span></button>
+          <button class="btn-icon search-trigger-btn" title="Search site (Ctrl+K)"><i class="fa fa-search" aria-hidden="true"></i></button>
+          <a href="pathfinder club.html#register" class="btn btn-secondary btn-sm">Join Us</a>
+          <button class="hamburger-btn" aria-label="Toggle navigation menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
         </div>
       </div>
     </div>
   </header>
 
+  <!-- Mobile Navigation Drawer -->
   <div class="mobile-backdrop"></div>
-  <aside class="mobile-nav-drawer">
+  <aside class="mobile-nav-drawer" aria-label="Mobile Navigation">
     <div class="mobile-drawer-header">
-      <strong>More & FAQs</strong>
-      <button class="mobile-drawer-close">&times;</button>
+      <div class="brand-identity">
+        <img src="images/sad logo.png" alt="Logo" style="width: 40px; height: 40px; object-fit: contain;">
+        <div class="brand-text">
+          <strong style="color:var(--color-primary);">Hima SDA</strong>
+        </div>
+      </div>
+      <button class="mobile-drawer-close" aria-label="Close menu">&times;</button>
     </div>
     <div class="mobile-nav-links">
-      <a href="index.html">Home</a>
-      <a href="about.html">About Us</a>
-      <a href="more.html" class="active">Calendar & FAQs</a>
-      <a href="ministries.html">Ministries</a>
-      <a href="resources.html">Resources</a>
-      <a href="media.html">Media</a>
-      <a href="staff & contact.html">Staff & Contact</a>
+      <a href="index.html"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+      <a href="about.html"><i class="fa fa-info-circle" aria-hidden="true"></i> About us</a>
+      <a href="staff & contact.html"><i class="fa fa-users" aria-hidden="true"></i> Staff & Contact</a>
+
+      <div>
+        <button class="mobile-nav-dropdown-btn">
+          <span>Ministries</span> <span class="arrow-icon"><i class="fa fa-chevron-down" aria-hidden="true"></i></span>
+        </button>
+        <div class="mobile-submenu">
+          <a href="pathfinder club.html">Pathfinder Club</a>
+          <a href="adventurer club.html">Adventurer Club</a>
+          <a href="Ambassador club.html">Ambassador Club</a>
+          <a href="public compus ministries.html">Public Campus Ministries</a>
+          <a href="youth.html">Adventist Youth (AY)</a>
+          <a href="young adults.html">Young Adults</a>
+          <a href="children.html">Children Ministries</a>
+          <a href="women.html">Women's Ministries</a>
+          <a href="communty.html">Community Service</a>
+        </div>
+      </div>
+
+      <div>
+        <button class="mobile-nav-dropdown-btn">
+          <span>Resources</span> <span class="arrow-icon"><i class="fa fa-chevron-down" aria-hidden="true"></i></span>
+        </button>
+        <div class="mobile-submenu">
+          <a href="resources.html">All Resources</a>
+          <a href="resources.html#handbook">Elders Handbook</a>
+          <a href="resources.html#manual">Church Manual</a>
+          <a href="resources.html#program">GC Yearly Program</a>
+          <a href="resources.html#sabbath-school">Sabbath School Lessons</a>
+          <a href="resources.html#pathfinder-resources">Pathfinder Honors & Songs</a>
+        </div>
+      </div>
+
+      <div>
+        <button class="mobile-nav-dropdown-btn">
+          <span>More</span> <span class="arrow-icon"><i class="fa fa-chevron-down" aria-hidden="true"></i></span>
+        </button>
+        <div class="mobile-submenu">
+          <a href="media.html">Media & Sermons</a>
+          <a href="more.html#events">Calendar & Events</a>
+          <a href="more.html#announcements">Announcements</a>
+          <a href="more.html#faqs">Church & Club FAQs</a>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top:auto; padding-top:20px; border-top:1px solid var(--color-border);">
+      <a href="pathfinder club.html#register" class="btn btn-secondary" style="width:100%; text-align:center; display:block; margin-bottom:10px;">Join Us</a>
+      <a href="staff & contact.html#prayer-request" class="btn btn-primary" style="width:100%; text-align:center; display:block;">Submit Prayer Request</a>
     </div>
   </aside>
 
@@ -232,7 +313,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <div class="footer-logo">
-            <img src="images/sad logo.png" alt="Logo">
+            <img src="images/pngaaa.com-379408.png" alt="Logo">
             <h3>Hima SDA Church</h3>
           </div>
           <p>Connecting people to Jesus and walking together in biblical faith.</p>
@@ -260,6 +341,7 @@
             <li><a href="adventurer club.html"><i class="fa fa-angle-right" aria-hidden="true"></i> Adventurer Club</a></li>
             <li><a href="Ambassador club.html"><i class="fa fa-angle-right" aria-hidden="true"></i> Ambassador Club</a></li>
             <li><a href="youth.html"><i class="fa fa-angle-right" aria-hidden="true"></i> Youth Ministries</a></li>
+             <li><a href="public compus ministries.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Public Campus Ministries</a></li>
           </ul>
         </div>
         <div>
@@ -284,5 +366,7 @@
     </div>
   </footer>
 
+  </div>
+  <aside class="page-sidebar-right" aria-hidden="true"><img src="images/sad logo.png" alt="SDA Church" class="sidebar-logo"></aside></div>
 </body>
 </html>

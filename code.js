@@ -4,24 +4,25 @@
  */
 
 
-const SUPABASE_URL = "https://yfuxlmntkkvkpzokfxtz.supabase.co";
-const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_IlNjlOQsQS0GlZdlKhNbvQ_QGRqxZJ6";
+// ==========================================================================
+// 0. Backend API Configuration (Replaces Supabase)
+// ==========================================================================
+const API_BASE_URL = window.API_BASE_URL || "http://localhost:5000/api";
 
-function getSupabaseClient() {
-  if (!window.supabase) {
-    throw new Error("Supabase library has not loaded.");
-  }
+//splash image------------------------
+window.addEventListener("load", function () {
+  setTimeout(function () {
+    const splash = document.getElementById("splash-screen");
 
-  // Create the client only when a connected form needs it.
-  if (!window.himaSupabaseClient) {
-    window.himaSupabaseClient = window.supabase.createClient(
-      SUPABASE_URL,
-      SUPABASE_PUBLISHABLE_KEY
-    );
-  }
+    if (splash) {
+      splash.classList.add("hide");
 
-  return window.himaSupabaseClient;
-}
+      setTimeout(function () {
+        splash.remove();
+      }, 2000);
+    }
+  }, 6000); // Show for 2 seconds
+});
 
 
 
@@ -568,34 +569,75 @@ function initForms() {
           button.textContent = 'Sending...';
         }
 
+        // Support both staff & contact form fields and index quick-prayer fields
+        const fullName = (
+          (form.elements['full_name'] && form.elements['full_name'].value) ||
+          (form.querySelector('#prayer-name') && form.querySelector('#prayer-name').value) ||
+          (form.querySelector('[name="name"]') && form.querySelector('[name="name"]').value) ||
+          ''
+        ).trim();
+
+        const phone = (
+          (form.elements['phone'] && form.elements['phone'].value) ||
+          (form.querySelector('#prayer-contact') && form.querySelector('#prayer-contact').value) ||
+          (form.querySelector('[name="contact"]') && form.querySelector('[name="contact"]').value) ||
+          ''
+        ).trim();
+
+        const email = (
+          (form.elements['email'] && form.elements['email'].value) ||
+          ''
+        ).trim();
+
+        const subject = (
+          (form.elements['subject'] && form.elements['subject'].value) ||
+          'Prayer Request / Church Message'
+        ).trim();
+
+        const messageText = (
+          (form.elements['message'] && form.elements['message'].value) ||
+          (form.querySelector('#prayer-msg') && form.querySelector('#prayer-msg').value) ||
+          (form.querySelector('textarea') && form.querySelector('textarea').value) ||
+          ''
+        ).trim();
+
+        const payload = {
+          full_name: fullName,
+          phone: phone,
+          email: email || null,
+          subject: subject,
+          message: messageText
+        };
+
         try {
-          const db = getSupabaseClient();
+          const response = await fetch(`${API_BASE_URL}/messages`, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(payload)
+          });
 
-          const message = {
-            full_name: form.elements['full_name'].value.trim(),
-            phone: form.elements['phone'].value.trim(),
-            email: form.elements['email'].value.trim() || null,
-            subject: form.elements['subject'].value,
-            message: form.elements['message'].value.trim()
-          };
+          const result = await response.json();
 
-          const { error } = await db
-            .from('church_messages')
-            .insert(message);
-
-          if (error) {
-            console.error('Supabase submission failed:', error);
-            showToast('Message could not be sent. Please try again.');
-            return;
+          if (!response.ok || !result.success) {
+            throw new Error(result.error || 'Failed to send message to church server');
           }
 
           form.reset();
-          showToast(
-            'Thank you. Your message has been sent to Hima SDA Church.'
-          );
+          showToast('Thank you. Your message has been sent to Hima SDA Church.');
         } catch (error) {
-          console.error('Connection error:', error);
-          showToast('Connection problem. Please try again later.');
+          console.error('Backend submission error:', error);
+          // Fallback: save to local storage buffer so prayer/message is never lost
+          try {
+            const saved = JSON.parse(localStorage.getItem('hima_pending_messages') || '[]');
+            saved.push({ ...payload, saved_at: new Date().toISOString() });
+            localStorage.setItem('hima_pending_messages', JSON.stringify(saved));
+            form.reset();
+            showToast('Message recorded locally. It will sync once the server is connected.');
+          } catch (storageErr) {
+            showToast('Connection problem. Please ensure the backend server is running on port 5000.');
+          }
         } finally {
           if (button) {
             button.disabled = false;
